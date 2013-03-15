@@ -1,0 +1,45 @@
+<head>
+  <title>earechnung</title>
+</head>
+
+<body>
+  <header>
+    <div class="header row" role="header">
+        <nav class="top-bar">
+          <ul class="title-area">
+            <!-- Title Area -->
+            <li class="name">
+              <h1><a href="#">E/A</a></h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+          </ul>
+          <section class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="left">
+              <li class="divider"></li>
+              <li><a href="#">Rechnung</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Übersicht</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Drucken</a></li>
+              <li class="divider"></li>
+            </ul>
+            <ul class="right">
+              <li class="divider"></li>
+              <li><a href="#">Login</a></li>
+              <li class="divider"></li>
+            </ul>
+            
+          </section>
+        </nav>
+    </div>
+  </header>
+  {{> content}}
+</body>
+
+<template name="content">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+</template>
