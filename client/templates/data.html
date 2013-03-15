@@ -1,0 +1,104 @@
+<template name="data">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>Einahmen &amp; Ausgaben</h1>
+    </div>  
+  </div>
+  <div class="dt">
+    <div class="row dt__row dt__head">
+      <div class="large-1 columns dt__column dt__column--date">
+        Datum
+      </div>
+      <div class="large-1 columns dt__column dt__column--docnr">
+        #Beleg
+      </div>
+      <div class="large-4 columns dt__column dt__column--text">
+        Text
+      </div>
+      <div class="large-1 columns dt__column dt__column--earning">
+        Einnahmen
+      </div>
+      <div class="large-1 columns dt__column dt__column--spending">
+        Ausgaben
+      </div>
+      <div class="large-1 columns dt__column dt__column--vat">
+        USt. %
+      </div>
+      <div class="large-1 columns dt__column dt__column--catnr">
+        #Kategorie
+      </div>
+      <div class="large-2 columns dt__column dt__column--cat">
+        Kategorie
+      </div>
+    </div>
+    {{#each data}}
+      {{> dt_row}}
+    {{/each}}
+    {{> dt_input}}
+  </div>
+</template>
+
+<template name="dt_row">
+  <div class="row dt__row dt_content">
+    <div class="large-1 columns dt__column dt__column--date">
+      <p>{{date}}</p>
+    </div>
+    <div class="large-1 columns dt__column dt__column--docnr">
+      <p>{{docnr}}</p>
+    </div>
+    <div class="large-4 columns dt__column dt__column--text">
+      <p>{{text}}</p>
+    </div>
+    <div class="large-1 columns dt__column dt__column--earning">
+      <p>{{earning}}</p>
+    </div>
+    <div class="large-1 columns dt__column dt__column--spending">
+      <p>{{spending}}</p>
+    </div>
+    <div class="large-1 columns dt__column dt__column--vat">
+      <p>{{vat}}</p>
+    </div>
+    <div class="large-1 columns dt__column dt__column--catnr">
+      <p>{{catnr}}</p>
+    </div>
+    <div class="large-2 columns dt__column dt__column--cat">
+      <p>{{cat}}</p>
+    </div>
+  </div>
+</template>
+
+<template name="dt_input">
+  <div class="row dt__row dt_content">
+    <div class="large-1 columns dt__column dt__column--date">
+      <input type="text" name="date" id="date">
+    </div>
+    <div class="large-1 columns dt__column dt__column--docnr">
+      <input type="text" name="docnr" id="docnr">
+    </div>
+    <div class="large-4 columns dt__column dt__column--text">
+      <input type="text" name="text" id="text">
+    </div>
+    <div class="large-1 columns dt__column dt__column--earning">
+      <input type="number" name="earning" id="earning">
+    </div>
+    <div class="large-1 columns dt__column dt__column--spending">
+      <input type="number" name="spending" id="spending">
+    </div>
+    <div class="large-1 columns dt__column dt__column--vat">
+      <input type="number" name="vat" id="vat">
+    </div>
+    <div class="large-1 columns dt__column dt__column--catnr">
+      <input type="number" name="catnr" id="catnr">
+    </div>
+    <div class="large-2 columns dt__column dt__column--cat">
+      <input type="text" name="cat" id="cat">
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="button" id="submit_new_data">Submit</div>
+    </div>
+  </div>
+</template>
+
+

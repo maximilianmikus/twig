@@ -1,15 +1,16 @@
 <head>
-  <title>earechnung</title>
+  <title>Twig</title>
 </head>
 
 <body>
   <header>
     <div class="header row" role="header">
+      <div class="large-12 columns">
         <nav class="top-bar">
           <ul class="title-area">
             <!-- Title Area -->
             <li class="name">
-              <h1><a href="#">E/A</a></h1>
+              <h1><a href="#">Twig</a></h1>
             </li>
             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
             <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
@@ -26,20 +27,32 @@
               <li class="divider"></li>
             </ul>
             <ul class="right">
-              <li class="divider"></li>
-              <li><a href="#">Login</a></li>
-              <li class="divider"></li>
+              {{loginButtons align="right"}}
             </ul>
-            
           </section>
         </nav>
+      </div>
     </div>
   </header>
-  {{> content}}
+  <div role="main" class="container">
+    {{#if currentUser}}
+      {{> data}}
+    {{else}}
+      {{> start}}
+    {{/if}}
+  </div>
+  <footer role="footer">
+
+  </footer>
+  
 </body>
 
-<template name="content">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+
+<template name="start">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>Please Login</h1>
+    </div>
+  </div>  
 </template>
+
