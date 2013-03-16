@@ -12,7 +12,7 @@
       <div class="large-1 columns dt__column dt__column--docnr">
         #Beleg
       </div>
-      <div class="large-4 columns dt__column dt__column--text">
+      <div class="large-3 columns dt__column dt__column--text">
         Text
       </div>
       <div class="large-1 columns dt__column dt__column--earning">
@@ -30,6 +30,9 @@
       <div class="large-2 columns dt__column dt__column--cat">
         Kategorie
       </div>
+      <div class="large-1 columns dt__column dt__column--edit">
+        
+      </div>
     </div>
     {{#each data}}
       {{> dt_row}}
@@ -46,7 +49,7 @@
     <div class="large-1 columns dt__column dt__column--docnr">
       <p>{{docnr}}</p>
     </div>
-    <div class="large-4 columns dt__column dt__column--text">
+    <div class="large-3 columns dt__column dt__column--text">
       <p>{{text}}</p>
     </div>
     <div class="large-1 columns dt__column dt__column--earning">
@@ -64,7 +67,13 @@
     <div class="large-2 columns dt__column dt__column--cat">
       <p>{{cat}}</p>
     </div>
+    <div class="large-1 columns dt__column dt__column--edit">
+      <div class="destroy">
+        x
+      </div>
+    </div>
   </div>
+  
 </template>
 
 <template name="dt_input">
@@ -85,7 +94,11 @@
       <input type="number" name="spending" id="spending">
     </div>
     <div class="large-1 columns dt__column dt__column--vat">
-      <input type="number" name="vat" id="vat">
+      <select name="vat" id="vat">
+        <option value="20" selected>20</option> 
+        <option value="10">10</option>
+        <option value="0">0</option>
+      </select>
     </div>
     <div class="large-1 columns dt__column dt__column--catnr">
       <input type="number" name="catnr" id="catnr">

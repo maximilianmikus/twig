@@ -133,6 +133,13 @@ Template.data.data = function () {
   return Data.find(sel, {sort: {timestamp: 1}});
 };
 
+Template.dt_row.events({
+  'click .destroy': function () {
+    Data.remove(this._id);
+    console.log(this._id);
+  }
+});
+
 ////////// Tracking selected list in URL //////////
 
 var TodosRouter = Backbone.Router.extend({
