@@ -10,7 +10,8 @@
           <ul class="title-area">
             <!-- Title Area -->
             <li class="name">
-              <h1><a href="#">Twig</a></h1>
+              <img src="twig.png" class="left">
+              <!-- <h1><a href="#">Twig</a></h1> -->
             </li>
             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
             <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
@@ -28,6 +29,7 @@
             </ul>
             <ul class="right">
               {{loginButtons align="right"}}
+              {{> flattr}}
             </ul>
           </section>
         </nav>
@@ -44,7 +46,6 @@
   <footer role="footer">
 
   </footer>
-  
 </body>
 
 
@@ -54,5 +55,9 @@
       <h1>Please Login</h1>
     </div>
   </div>  
+</template>
+
+<template name="flattr">
+  <div id="flattrbtn"></div>
 </template>
 
