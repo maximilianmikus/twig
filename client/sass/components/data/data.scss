@@ -1,0 +1,25 @@
+.dt__row {
+	margin-bottom: 10px;
+}
+
+.dt__column {
+	font-size: 0.8em;
+}
+
+.dt__head {
+	margin-bottom: 20px;
+	.dt__column--earning {
+		color: inherit;
+	}
+	.dt__column--spending {
+		color: inherit;
+	}
+}
+
+.dt__column--earning {
+	color: green;
+}
+
+.dt__column--spending {
+	color: red;
+}
