@@ -2,7 +2,8 @@
 
 // init session vars
 
-Session.set('editing', null);
+Session.setDefault('editing', null);
+Session.setDefault('currentPage', "home");
 
 var dataHandle = null;
 
@@ -65,13 +66,44 @@ var updatedata = function(id, selector) {
   }});
 }
 
+////////// Page Controller ////////////
 
-////////// Todos //////////
+
+Template.page.events = {
+  'click .navlink': function (event) {
+      // prevent default browser link click behaviour
+      event.preventDefault();
+      // get the path from the link        
+      var href = $(this).attr("href");
+      console.log(href);
+      //var pathname = reg.exec(event.currentTarget.href)[1];
+      var pathname = href
+        // route the URL 
+      router.navigate(pathname, true);
+  }
+};
+
+////////// Main //////////
+
+Template.main.currentPage = function (page) {
+  console.log(page);
+  var eq = Session.equals('currentPage', page);
+  var i = 0;
+  if (eq === true) {
+    i = 1;
+  } else {
+    i = 0;
+  }
+  console.log(eq);
+  console.log(i);
+  return i;
+};
+
+////////// Data //////////
 
 Template.data.loading = function () {
   return dataHandle && !dataHandle.ready();
 };
-
 
 Template.dt_input.events({
   // Fires when submit button is clicked
@@ -110,6 +142,9 @@ Template.dt_row.events({
   'click .edit': function () {
     Session.set('editing', this._id);
   },
+  'click .discard': function () {
+    Session.set('editing', null);
+  },
   'click .save': function () {
     var id = this._id;
     var sel = "#"+id;
@@ -120,24 +155,37 @@ Template.dt_row.events({
 
 ////////// Tracking selected list in URL //////////
 
-var TodosRouter = Backbone.Router.extend({
+var ContentRouter = Backbone.Router.extend({
   routes: {
-    ":user_id": "main"
+    "": "home",
+    ":page": "page"
   },
-  main: function (list_id) {
-    var oldList = Session.get("list_id");
-    if (oldList !== list_id) {
-      Session.set("list_id", list_id);
-      Session.set("tag_filter", null);
-    }
-  },
-  setList: function (list_id) {
-    this.navigate(list_id, true);
+  page: function (page) {
+    console.log(page);
+    Session.set('currentPage', page);
   }
 });
 
-Router = new TodosRouter;
+var router = new ContentRouter;
+
+router.on('route:page', function (page) {
+  console.log("setting session -> "+page);
+  Session.set('currentPage', page);
+});
 
 Meteor.startup(function () {
   Backbone.history.start({pushState: true});
 });
+
+
+/////////// Prevent Default ///////////////////
+/*
+$(document).ready(function() {
+  $(".navlink").click(function(e) {
+    e.preventDefault();
+    var href = $(this).attr("href");
+    console.log("navigate -> "+href);
+    router.navigate(href);
+  });
+});
+*/

@@ -3,6 +3,10 @@
 </head>
 
 <body>
+  {{> page}}
+</body>
+
+<template name="page">
   <header>
     <div class="header row" role="header">
       <div class="large-12 columns">
@@ -20,11 +24,11 @@
             <!-- Left Nav Section -->
             <ul class="left">
               <li class="divider"></li>
-              <li><a href="#">Rechnung</a></li>
+              <li><a class="navlink" href="data">Rechnung</a></li>
               <li class="divider"></li>
-              <li><a href="#">Übersicht</a></li>
+              <li><a class="navlink" href="overview">Übersicht</a></li>
               <li class="divider"></li>
-              <li><a href="#">Drucken</a></li>
+              <li><a class="navlink" href="print">Drucken</a></li>
               <li class="divider"></li>
             </ul>
             <ul class="right">
@@ -37,19 +41,35 @@
     </div>
   </header>
   <div role="main" class="container">
-    {{#if currentUser}}
-      {{> data}}
-    {{else}}
-      {{> start}}
-    {{/if}}
+    {{> main}}
   </div>
   <footer role="footer">
 
   </footer>
-</body>
+</template>
+
+<template name="main">
+  {{#if currentPage "home"}}
+    <h1>{{currentPage}}</h1>
+  {{else}}
+    {{#if currentUser}}
+      {{#if currentPage "data"}}
+        {{> data}}
+      {{/if}}
+      {{#if currentPage "overview"}}
+        {{> overview}}
+      {{/if}}
+      {{#if currentPage "print"}}
+        {{> print}}
+      {{/if}}
+    {{else}}
+      {{> loggedout}}
+    {{/if}}
+  {{/if}}
+</template>
 
 
-<template name="start">
+<template name="loggedout">
   <div class="row">
     <div class="large-12 columns">
       <h1>Please Login</h1>
