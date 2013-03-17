@@ -1,0 +1,83 @@
+<head>
+  <title>Twig</title>
+</head>
+
+<body>
+  {{> page}}
+</body>
+
+<template name="page">
+  <header>
+    <div class="header row" role="header">
+      <div class="large-12 columns">
+        <nav class="top-bar">
+          <ul class="title-area">
+            <!-- Title Area -->
+            <li class="name">
+              <img src="twig.png" class="left">
+              <!-- <h1><a href="#">Twig</a></h1> -->
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+          </ul>
+          <section class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="left">
+              <li class="divider"></li>
+              <li><a class="navlink" href="data">Rechnung</a></li>
+              <li class="divider"></li>
+              <li><a class="navlink" href="overview">Übersicht</a></li>
+              <li class="divider"></li>
+              <li><a class="navlink" href="print">Drucken</a></li>
+              <li class="divider"></li>
+            </ul>
+            <ul class="right">
+              {{loginButtons align="right"}}
+              {{> flattr}}
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div role="main" class="container">
+    {{> main}}
+  </div>
+  <footer role="footer">
+
+  </footer>
+</template>
+
+<template name="main">
+  {{#if currentPage "home"}}
+    <h1>{{currentPage}}</h1>
+  {{else}}
+    {{#if currentUser}}
+      {{#if currentPage "data"}}
+        {{> data}}
+      {{/if}}
+      {{#if currentPage "overview"}}
+        {{> overview}}
+      {{/if}}
+      {{#if currentPage "print"}}
+        {{> print}}
+      {{/if}}
+    {{else}}
+      {{> loggedout}}
+    {{/if}}
+  {{/if}}
+</template>
+
+
+<template name="loggedout">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>Please Login</h1>
+    </div>
+  </div>  
+</template>
+
+<template name="flattr">
+  <div id="flattrbtn"></div>
+</template>
+

@@ -1,0 +1,146 @@
+<template name="data">
+  <div class="dt">
+    <div class="row dt__row dt__head">
+      <div class="large-1 columns dt__column dt__column--date">
+        Datum
+      </div>
+      <div class="large-1 columns dt__column dt__column--docnr">
+        #Beleg
+      </div>
+      <div class="large-3 columns dt__column dt__column--text">
+        Text
+      </div>
+      <div class="large-1 columns dt__column dt__column--earning">
+        Einnahmen
+      </div>
+      <div class="large-1 columns dt__column dt__column--spending">
+        Ausgaben
+      </div>
+      <div class="large-1 columns dt__column dt__column--vat">
+        USt. %
+      </div>
+      <div class="large-1 columns dt__column dt__column--catnr">
+        #Kategorie
+      </div>
+      <div class="large-2 columns dt__column dt__column--cat">
+        Kategorie
+      </div>
+      <div class="large-1 columns dt__column dt__column--edit">
+        
+      </div>
+    </div>
+    {{#each data}}
+      {{> dt_row}}
+    {{/each}}
+    {{> dt_input}}
+  </div>
+</template>
+
+<template name="dt_row">
+  <div class="row dt__row dt_content" id="{{id}}">
+    <div class="large-1 columns dt__column dt__column--date">
+      {{#if editing}}
+        <input type="text" name="date-{{id}}" class="dt__column__input--date" value="{{date}}">
+      {{else}}
+        <p>{{date}}</p>
+      {{/if}}
+    </div>
+    <div class="large-1 columns dt__column dt__column--docnr">
+      {{#if editing}}
+        <input type="text" name="docnr-{{id}}" class="dt__column__input--docnr" value="{{docnr}}">
+      {{else}}
+        <p>{{docnr}}</p>
+      {{/if}}
+    </div>
+    <div class="large-3 columns dt__column dt__column--text">
+      {{#if editing}}
+        <input type="text" name="text-{{id}}" class="dt__column__input--text" value="{{text}}">
+      {{else}}
+        <p>{{text}}</p>
+      {{/if}}
+    </div>
+    <div class="large-1 columns dt__column dt__column--earning">
+      {{#if editing}}
+        <input type="number" name="earning-{{id}}" class="dt__column__input--earning" value="{{earning}}">
+      {{else}}
+        <p>{{earning}}</p>
+      {{/if}}
+    </div>
+    <div class="large-1 columns dt__column dt__column--spending">
+      {{#if editing}}
+        <input type="number" name="spending-{{id}}" class="dt__column__input--spending" value="{{spending}}">
+      {{else}}
+        <p>{{spending}}</p>
+      {{/if}}
+    </div>
+    <div class="large-1 columns dt__column dt__column--vat">
+      {{#if editing}}
+        <input type="text" name="vat-{{id}}" class="dt__column__input--spending" value="{{spending}}">
+      {{else}}
+        <p>{{vat}}</p>
+      {{/if}}
+    </div>
+    <div class="large-1 columns dt__column dt__column--catnr">
+      {{#if editing}}
+        <input type="number" name="catnr-{{id}}" class="dt__column__input--catnr" value="{{catnr}}">
+      {{else}}
+        <p>{{catnr}}</p>
+      {{/if}}
+    </div>
+    <div class="large-2 columns dt__column dt__column--cat">
+      {{#if editing}}
+        <input type="text" name="cat-{{id}}" class="dt__column__input--cat" value="{{cat}}">
+      {{else}}
+        <p>{{cat}}</p>
+      {{/if}}
+    </div>
+    <div class="large-1 columns dt__column dt__column--edit">
+      {{#if editing}}
+        <div class="save button small success">&#10004;</div>
+        <div class="discard button small secondary">&#10006;</div>
+      {{else}}
+      <div class="edit button small secondary">&#9998;</div>
+      <div class="destroy button small alert">&#10006;</div>
+      {{/if}}
+    </div>
+  </div>
+  
+</template>
+
+<template name="dt_input">
+  <div class="row dt__row dt_input" id="dt_input">
+    <div class="large-1 columns dt__column dt__column--date">
+      <input type="text" name="date" class="dt__column__input--date">
+    </div>
+    <div class="large-1 columns dt__column dt__column--docnr">
+      <input type="text" name="docnr" class="dt__column__input--docnr">
+    </div>
+    <div class="large-3 columns dt__column dt__column--text">
+      <input type="text" name="text" class="dt__column__input--text">
+    </div>
+    <div class="large-1 columns dt__column dt__column--earning">
+      <input type="number" name="earning" class="dt__column__input--earning">
+    </div>
+    <div class="large-1 columns dt__column dt__column--spending">
+      <input type="number" name="spending" class="dt__column__input--spending">
+    </div>
+    <div class="large-1 columns dt__column dt__column--vat">
+      <select name="vat" class="dt__column__input--vat">
+        <option value="20" selected>20</option> 
+        <option value="10">10</option>
+        <option value="0">0</option>
+      </select>
+    </div>
+    <div class="large-1 columns dt__column dt__column--catnr">
+      <input type="number" name="catnr" class="dt__column__input--catnr">
+    </div>
+    <div class="large-2 columns dt__column dt__column--cat">
+      <input type="text" name="cat" class="dt__column__input--cat">
+    </div>
+    <div class="large-1 columns dt__column dt__column--cat">
+      <div class="button" id="submit_new_data">Submit</div>
+    </div>
+  </div>
+</template>
+
+
