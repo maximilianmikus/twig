@@ -66,39 +66,6 @@ var updatedata = function(id, selector) {
   }});
 }
 
-////////// Page Controller ////////////
-
-
-Template.page.events = {
-  'click .navlink': function (event) {
-      // prevent default browser link click behaviour
-      event.preventDefault();
-      // get the path from the link        
-      var href = $(this).attr("href");
-      console.log(href);
-      //var pathname = reg.exec(event.currentTarget.href)[1];
-      var pathname = href
-        // route the URL 
-      router.navigate(pathname, true);
-  }
-};
-
-////////// Main //////////
-
-Template.main.currentPage = function (page) {
-  console.log(page);
-  var eq = Session.equals('currentPage', page);
-  var i = 0;
-  if (eq === true) {
-    i = 1;
-  } else {
-    i = 0;
-  }
-  console.log(eq);
-  console.log(i);
-  return i;
-};
-
 ////////// Data //////////
 
 Template.data.loading = function () {
@@ -153,39 +120,14 @@ Template.dt_row.events({
   } 
 });
 
-////////// Tracking selected list in URL //////////
+//////////// Meteorite Router /////////////////
 
-var ContentRouter = Backbone.Router.extend({
-  routes: {
-    "": "home",
-    ":page": "page"
+Meteor.Router.add({
+  '': 'home',
+
+  '/:page': function(page) {
+    return page;
   },
-  page: function (page) {
-    console.log(page);
-    Session.set('currentPage', page);
-  }
+
+  '*': 'not_found'
 });
-
-var router = new ContentRouter;
-
-router.on('route:page', function (page) {
-  console.log("setting session -> "+page);
-  Session.set('currentPage', page);
-});
-
-Meteor.startup(function () {
-  Backbone.history.start({pushState: true});
-});
-
-
-/////////// Prevent Default ///////////////////
-/*
-$(document).ready(function() {
-  $(".navlink").click(function(e) {
-    e.preventDefault();
-    var href = $(this).attr("href");
-    console.log("navigate -> "+href);
-    router.navigate(href);
-  });
-});
-*/

@@ -3,10 +3,6 @@
 </head>
 
 <body>
-  {{> page}}
-</body>
-
-<template name="page">
   <header>
     <div class="header row" role="header">
       <div class="large-12 columns">
@@ -41,32 +37,12 @@
     </div>
   </header>
   <div role="main" class="container">
-    {{> main}}
+    {{renderPage}}
   </div>
   <footer role="footer">
 
   </footer>
-</template>
-
-<template name="main">
-  {{#if currentPage "home"}}
-    <h1>{{currentPage}}</h1>
-  {{else}}
-    {{#if currentUser}}
-      {{#if currentPage "data"}}
-        {{> data}}
-      {{/if}}
-      {{#if currentPage "overview"}}
-        {{> overview}}
-      {{/if}}
-      {{#if currentPage "print"}}
-        {{> print}}
-      {{/if}}
-    {{else}}
-      {{> loggedout}}
-    {{/if}}
-  {{/if}}
-</template>
+</body>
 
 
 <template name="loggedout">
