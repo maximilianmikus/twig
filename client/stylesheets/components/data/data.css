@@ -30,3 +30,19 @@
 .dt__column--spending {
   color: red;
 }
+
+/* line 27, ../../../sass/components/data/data.scss */
+.switch.small {
+  height: 2em;
+}
+
+/* line 31, ../../../sass/components/data/data.scss */
+.switch.small > span {
+  width: 2em;
+  height: 2em;
+}
+
+/* line 36, ../../../sass/components/data/data.scss */
+.switch.small label {
+  line-height: 2.5em;
+}

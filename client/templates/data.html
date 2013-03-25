@@ -10,17 +10,14 @@
       <div class="large-3 columns dt__column dt__column--text">
         Text
       </div>
-      <div class="large-1 columns dt__column dt__column--earning">
+      <div class="large-1 columns dt__column dt__column--amount">
         Einnahmen
       </div>
-      <div class="large-1 columns dt__column dt__column--spending">
+      <div class="large-2 columns dt__column dt__column--isearning">
         Ausgaben
       </div>
       <div class="large-1 columns dt__column dt__column--vat">
         USt. %
-      </div>
-      <div class="large-1 columns dt__column dt__column--catnr">
-        #Kategorie
       </div>
       <div class="large-2 columns dt__column dt__column--cat">
         Kategorie
@@ -37,110 +34,202 @@
 </template>
 
 <template name="dt_row">
-  <div class="row dt__row dt_content" id="{{id}}">
-    <div class="large-1 columns dt__column dt__column--date">
+  <form class="custom">
+    <div class="row dt__row dt_content" id="{{id}}">
+      <div class="large-1 columns dt__column dt__column--date">
+        {{#if editing}}
+          <input type="text" name="date-{{id}}" class="dt__column__input--date" value="{{date}}">
+        {{else}}
+          <p>{{date}}</p>
+        {{/if}}
+      </div>
+      <div class="large-1 columns dt__column dt__column--docnr">
+        {{#if editing}}
+          <input type="text" name="docnr-{{id}}" class="dt__column__input--docnr" value="{{docnr}}">
+        {{else}}
+          <p>{{docnr}}</p>
+        {{/if}}
+      </div>
+      <div class="large-3 columns dt__column dt__column--text">
+        {{#if editing}}
+          <input type="text" name="text-{{id}}" class="dt__column__input--text" value="{{text}}">
+        {{else}}
+          <p>{{text}}</p>
+        {{/if}}
+      </div>
       {{#if editing}}
-        <input type="text" name="date-{{id}}" class="dt__column__input--date" value="{{date}}">
+        {{> dt_row_amount_input}}
       {{else}}
-        <p>{{date}}</p>
+        {{#if isearning}}
+          <div class="large-1 columns dt__column dt__column--earning">
+            <p>{{amount}}</p>
+          </div>
+          <div class="large-2 columns dt__column dt__column--spending">
+            <p></p>
+          </div>
+        {{else}}
+          <div class="large-1 columns dt__column dt__column--earning">
+            <p></p>
+          </div>
+          <div class="large-2 columns dt__column dt__column--spending">
+            <p>-{{amount}}</p>
+          </div>
+        {{/if}}
       {{/if}}
+      <div class="large-1 columns dt__column dt__column--vat">
+        {{#if editing}}
+          {{> dt_row_vat}}
+        {{else}}
+          <p>{{vat}}</p>
+        {{/if}}
+      </div>
+      <div class="large-2 columns dt__column dt__column--cat">
+        {{#if editing}}
+          {{> dt_row_cat_input}}
+        {{else}}
+          <p>{{cattext}}</p>
+        {{/if}}
+      </div>
+      <div class="large-1 columns dt__column dt__column--edit">
+        {{#if editing}}
+          <div class="save button small success">&#10004;</div>
+          <div class="discard button small secondary">&#10006;</div>
+        {{else}}
+        <div class="edit button small secondary">&#9998;</div>
+        <div class="destroy button small alert">&#10006;</div>
+        {{/if}}
+      </div>
     </div>
-    <div class="large-1 columns dt__column dt__column--docnr">
-      {{#if editing}}
-        <input type="text" name="docnr-{{id}}" class="dt__column__input--docnr" value="{{docnr}}">
-      {{else}}
-        <p>{{docnr}}</p>
-      {{/if}}
-    </div>
-    <div class="large-3 columns dt__column dt__column--text">
-      {{#if editing}}
-        <input type="text" name="text-{{id}}" class="dt__column__input--text" value="{{text}}">
-      {{else}}
-        <p>{{text}}</p>
-      {{/if}}
-    </div>
-    <div class="large-1 columns dt__column dt__column--earning">
-      {{#if editing}}
-        <input type="number" name="earning-{{id}}" class="dt__column__input--earning" value="{{earning}}">
-      {{else}}
-        <p>{{earning}}</p>
-      {{/if}}
-    </div>
-    <div class="large-1 columns dt__column dt__column--spending">
-      {{#if editing}}
-        <input type="number" name="spending-{{id}}" class="dt__column__input--spending" value="{{spending}}">
-      {{else}}
-        <p>{{spending}}</p>
-      {{/if}}
-    </div>
-    <div class="large-1 columns dt__column dt__column--vat">
-      {{#if editing}}
-        <input type="text" name="vat-{{id}}" class="dt__column__input--spending" value="{{spending}}">
-      {{else}}
-        <p>{{vat}}</p>
-      {{/if}}
-    </div>
-    <div class="large-1 columns dt__column dt__column--catnr">
-      {{#if editing}}
-        <input type="number" name="catnr-{{id}}" class="dt__column__input--catnr" value="{{catnr}}">
-      {{else}}
-        <p>{{catnr}}</p>
-      {{/if}}
-    </div>
-    <div class="large-2 columns dt__column dt__column--cat">
-      {{#if editing}}
-        <input type="text" name="cat-{{id}}" class="dt__column__input--cat" value="{{cat}}">
-      {{else}}
-        <p>{{cat}}</p>
-      {{/if}}
-    </div>
-    <div class="large-1 columns dt__column dt__column--edit">
-      {{#if editing}}
-        <div class="save button small success">&#10004;</div>
-        <div class="discard button small secondary">&#10006;</div>
-      {{else}}
-      <div class="edit button small secondary">&#9998;</div>
-      <div class="destroy button small alert">&#10006;</div>
-      {{/if}}
-    </div>
-  </div>
-  
+  </form>
 </template>
 
 <template name="dt_input">
-  <div class="row dt__row dt_input" id="dt_input">
-    <div class="large-1 columns dt__column dt__column--date">
-      <input type="text" name="date" class="dt__column__input--date">
+  <form class="custom">
+    <div class="row dt__row dt_input" id="dt_input">
+      <div class="large-1 columns dt__column dt__column--date">
+        <input type="text" name="date" class="dt__column__input--date">
+      </div>
+      <div class="large-1 columns dt__column dt__column--docnr">
+        <input type="text" name="docnr" class="dt__column__input--docnr">
+      </div>
+      <div class="large-3 columns dt__column dt__column--text">
+        <input type="text" name="text" class="dt__column__input--text">
+      </div>
+      <div class="large-1 columns dt__column dt__column--amount">
+        <input type="text" name="amount" class="dt__column__input--amount">
+      </div>
+      <div class="large-2 columns dt__column dt__column--isearning">
+        <div class="switch switch-input small">
+          <input id="isearning-yes" name="isearning" type="radio" checked>
+          <label for="isearning-yes">Einnahme</label>
+          <input id="isearning-no" name="isearning" type="radio">
+          <label for="isearning-no">Ausgabe</label>
+          <span></span>
+        </div>
+      </div>
+      <div class="large-1 columns dt__column dt__column--vat">
+        <select name="vat" class="dt__column__input--vat">
+          <option value="20" selected>20</option> 
+          <option value="10">10</option>
+          <option value="0">0</option>
+        </select>
+      </div>
+      <div class="large-2 columns dt__column dt__column--cat">
+        {{> cat_input}}
+      </div>
+      <div class="large-1 columns dt__column dt__column--cat">
+        <div class="button small" id="submit_new_data">Eintragen</div>
+      </div>
     </div>
-    <div class="large-1 columns dt__column dt__column--docnr">
-      <input type="text" name="docnr" class="dt__column__input--docnr">
+  </form>
+</template>
+
+<template name="cat_input">
+  {{#if isearning}}
+  <select name="cat" class="dt__column__input--cat">
+    <option value="0001" selected>Betriebseinnahmen</option> 
+    <option value="0002">Betriebseinnahmen, keine Meldepflicht</option>
+    <option value="0003">Anlagenerträge</option>
+    <option value="0004">Übrige Betriebseinnahmen</option>
+  </select>
+  {{else}}
+  <select name="cat" class="dt__column__input--cat">
+    <option value="1001" selected>Waren- Roh- und Hilfsstoffe</option> 
+    <option value="1002">Beigestelltes Personal</option>
+    <option value="1003">Personalaufwand</option>
+    <option value="1004">AfA</option>
+    <option value="1005">Instandhaltung f. Gebäude</option>
+    <option value="1006">Reise-und Fahrtspäsen</option>
+    <option value="1007">KFZ-Kosten</option>
+    <option value="1008">Miete, Pacht, Leasing</option>
+    <option value="1009">Provisionen, Lizenzen</option>
+    <option value="1010">Werbeaufwändung</option>
+    <option value="1011">Buchwert abgegangener Anlagen</option>
+    <option value="1012">Zinsen &amp; ähnliches</option>
+    <option value="1013">Pflichtversicherung</option>
+    <option value="1014">Übrige Betriebsausgaben</option>
+  </select>
+  {{/if}}
+</template>
+
+<template name="dt_row_vat">
+  <select name="vat-{{id}}" class="dt__column__input--vat">
+    <option value="20">20</option>
+    <option value="10">10</option>
+    <option value="0">0</option>
+  </select>
+</template>
+
+<template name="dt_row_amount_input">
+  <div class="large-1 columns dt__column dt__column--amount">
+    <input type="text" name="amount-{{id}}" class="dt__column__input--amount" value="{{amount}}">
+  </div>
+  <div class="large-2 columns dt__column dt__column--isearning">
+  {{#if isearning}}
+    <div class="switch switch-input small">
+      <input id="isearning-yes-{{id}}" name="isearning-{{id}}" type="radio" checked>
+      <label for="isearning-yes-{{id}}">Einnahme</label>
+      <input id="isearning-no-{{id}}" name="isearning-{{id}}" type="radio">
+      <label for="isearning-no-{{id}}">Ausgabe</label>
+      <span></span>
     </div>
-    <div class="large-3 columns dt__column dt__column--text">
-      <input type="text" name="text" class="dt__column__input--text">
+  {{else}}
+    <div class="switch switch-input small">
+      <input id="isearning-yes-{{id}}" name="isearning-{{id}}" type="radio">
+      <label for="isearning-yes-{{id}}">Einnahme</label>
+      <input id="isearning-no-{{id}}" name="isearning-{{id}}" type="radio" checked>
+      <label for="isearning-no-{{id}}">Ausgabe</label>
+      <span></span>
     </div>
-    <div class="large-1 columns dt__column dt__column--earning">
-      <input type="number" name="earning" class="dt__column__input--earning">
-    </div>
-    <div class="large-1 columns dt__column dt__column--spending">
-      <input type="number" name="spending" class="dt__column__input--spending">
-    </div>
-    <div class="large-1 columns dt__column dt__column--vat">
-      <select name="vat" class="dt__column__input--vat">
-        <option value="20" selected>20</option> 
-        <option value="10">10</option>
-        <option value="0">0</option>
-      </select>
-    </div>
-    <div class="large-1 columns dt__column dt__column--catnr">
-      <input type="number" name="catnr" class="dt__column__input--catnr">
-    </div>
-    <div class="large-2 columns dt__column dt__column--cat">
-      <input type="text" name="cat" class="dt__column__input--cat">
-    </div>
-    <div class="large-1 columns dt__column dt__column--cat">
-      <div class="button" id="submit_new_data">Submit</div>
-    </div>
+  {{/if}}
   </div>
 </template>
 
 
+<template name="dt_row_cat_input">
+  {{#if isearning}}
+  <select name="cat-{{id}}" class="dt__column__input--cat">
+    <option value="0001" selected>Betriebseinnahmen</option> 
+    <option value="0002">Betriebseinnahmen, keine Meldepflicht</option>
+    <option value="0003">Anlagenerträge</option>
+    <option value="0004">Übrige Betriebseinnahmen</option>
+  </select>
+  {{else}}
+  <select name="cat-{{id}}" class="dt__column__input--cat">
+    <option value="1001" selected>Waren- Roh- und Hilfsstoffe</option> 
+    <option value="1002">Beigestelltes Personal</option>
+    <option value="1003">Personalaufwand</option>
+    <option value="1004">AfA</option>
+    <option value="1005">Instandhaltung f. Gebäude</option>
+    <option value="1006">Reise-und Fahrtspäsen</option>
+    <option value="1007">KFZ-Kosten</option>
+    <option value="1008">Miete, Pacht, Leasing</option>
+    <option value="1009">Provisionen, Lizenzen</option>
+    <option value="1010">Werbeaufwändung</option>
+    <option value="1011">Buchwert abgegangener Anlagen</option>
+    <option value="1012">Zinsen &amp; ähnliches</option>
+    <option value="1013">Pflichtversicherung</option>
+    <option value="1014">Übrige Betriebsausgaben</option>
+  </select>
+  {{/if}}
+</template>

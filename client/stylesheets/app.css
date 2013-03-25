@@ -5055,8 +5055,8 @@ kbd {
     background: -moz-linear-gradient(top, white 0%, #f2f2f2 100%);
     background: -webkit-linear-gradient(top, white 0%, #f2f2f2 100%);
     background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%);
-    -webkit-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 1000px #e1f5d1, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
-    box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #e1f5d1, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
+    -webkit-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 1000px #fcd8d9, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px #e1f5d1;
+    box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #fcd8d9, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px #e1f5d1;
   }
   /* line 186, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-4.0.5/scss/foundation/components/_switch.scss */
   .switch:hover > span, .switch:focus > span {
@@ -5486,6 +5486,22 @@ table tfoot tr td {
 /* line 23, ../sass/components/data/data.scss */
 .dt__column--spending {
   color: red;
+}
+
+/* line 27, ../sass/components/data/data.scss */
+.switch.small {
+  height: 2em;
+}
+
+/* line 31, ../sass/components/data/data.scss */
+.switch.small > span {
+  width: 2em;
+  height: 2em;
+}
+
+/* line 36, ../sass/components/data/data.scss */
+.switch.small label {
+  line-height: 2.5em;
 }
 
 /* line 1, ../sass/components/header/header.scss */
