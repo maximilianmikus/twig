@@ -186,17 +186,55 @@ Template.dt_row_vat.rendered = function() {
 };
 
 Template.dt_row_cat_input.rendered = function() {
-
   var id = this.data._id,
       value = this.data.cat,
       selector = "#" + id;
+  $(selector+" .dt__column__input--cat option").removeAttr("selected");
+  $(selector+" .dt__column__input--cat option[value='" + value + "']").attr("selected", true);
+  $(selector+" .dt__column__input--cat option[value='" + value + "']").addClass("selected");
+  // @todo: get dropdowns working
+  $(document).foundation('dropdown', function (response) {
+    //console.log("ding");
+  });
+};
 
-  console.log(id);
-  console.log(value);
-  console.log(selector);
-  $(selector+" .dt__column__input--cat option[value='" + value + "']").prop("selected", true);
-  //$(document).foundation(); already initiated by dt_row_vat
+Template.overview.data = function () {
+
 };
 
 
 
+function initcharts() {
+  // Build Chart Data
+  var user_id = Meteor.userId();
+  var sel = {user_id: user_id};
+  var dataItems = Data.find({}, {sort: {date: 1}});
+  var arr = dataItems.fetch();
+  console.log(arr);
+
+  var data = {
+    labels : ["January","February","March","April","May","June","July"],
+    datasets : [
+      {
+        fillColor : "rgba(220,220,220,0.5)",
+        strokeColor : "rgba(220,220,220,1)",
+        pointColor : "rgba(220,220,220,1)",
+        pointStrokeColor : "#fff",
+        data : [1,2,3,2,2,1,3]
+      },
+      {
+        fillColor : "rgba(151,187,205,0.5)",
+        strokeColor : "rgba(151,187,205,1)",
+        pointColor : "rgba(151,187,205,1)",
+        pointStrokeColor : "#fff",
+        data : [3,2,1,2,4,2,1]
+      }
+    ]
+  };
+  var ctx = document.getElementById("finance-chart").getContext("2d");
+  var myNewChart = new Chart(ctx).Line(data);
+}
+
+Template.overview.rendered = function() {
+  initcharts();
+};
