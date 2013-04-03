@@ -210,7 +210,7 @@ function initcharts() {
   var sel = {user_id: user_id};
   var dataItems = Data.find({}, {sort: {date: 1}});
   var arr = dataItems.fetch();
-  console.log(arr);
+
 
   var data = {
     labels : ["January","February","March","April","May","June","July"],
@@ -220,17 +220,32 @@ function initcharts() {
         strokeColor : "rgba(220,220,220,1)",
         pointColor : "rgba(220,220,220,1)",
         pointStrokeColor : "#fff",
-        data : [1,2,3,2,2,1,3]
+        data : [0,0,0,0,0,0,0]
       },
       {
         fillColor : "rgba(151,187,205,0.5)",
         strokeColor : "rgba(151,187,205,1)",
         pointColor : "rgba(151,187,205,1)",
         pointStrokeColor : "#fff",
-        data : [3,2,1,2,4,2,1]
+        data : [0,0,0,0,0,0,0]
       }
     ]
   };
+  var spending = [];
+  var earning = [];
+  $.each(arr, function() {
+    var amount = parseFloat(this.amount);
+    console.log(amount);
+    if (this.isearning) {
+      earning.push(amount);
+    } else {
+      spending.push(amount);
+    }
+  });
+  data.datasets[0].data = earning;
+  data.datasets[1].data = spending;
+  console.log(data.datasets[0].data);
+  console.log(data.datasets[1].data);
   var ctx = document.getElementById("finance-chart").getContext("2d");
   var myNewChart = new Chart(ctx).Line(data);
 }
