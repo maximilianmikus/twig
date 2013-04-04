@@ -5455,56 +5455,61 @@ table tfoot tr td {
   max-width: 800px;
 }
 
-/* line 1, ../sass/components/data/data.scss */
+/* line 1, ../sass/components/data/_data.scss */
 .dt__row {
   margin-bottom: 10px;
 }
 
-/* line 5, ../sass/components/data/data.scss */
+/* line 5, ../sass/components/data/_data.scss */
 .dt__column {
   font-size: 0.8em;
 }
 
-/* line 9, ../sass/components/data/data.scss */
+/* line 9, ../sass/components/data/_data.scss */
 .dt__head {
   margin-bottom: 20px;
 }
-/* line 11, ../sass/components/data/data.scss */
+/* line 11, ../sass/components/data/_data.scss */
 .dt__head .dt__column--earning {
   color: inherit;
 }
-/* line 14, ../sass/components/data/data.scss */
+/* line 14, ../sass/components/data/_data.scss */
 .dt__head .dt__column--spending {
   color: inherit;
 }
 
-/* line 19, ../sass/components/data/data.scss */
+/* line 19, ../sass/components/data/_data.scss */
 .dt__column--earning {
   color: green;
 }
 
-/* line 23, ../sass/components/data/data.scss */
+/* line 23, ../sass/components/data/_data.scss */
 .dt__column--spending {
   color: red;
 }
 
-/* line 27, ../sass/components/data/data.scss */
+/* line 27, ../sass/components/data/_data.scss */
 .switch.small {
   height: 2em;
 }
 
-/* line 31, ../sass/components/data/data.scss */
+/* line 31, ../sass/components/data/_data.scss */
 .switch.small > span {
   width: 2em;
   height: 2em;
 }
 
-/* line 36, ../sass/components/data/data.scss */
+/* line 36, ../sass/components/data/_data.scss */
 .switch.small label {
   line-height: 2.5em;
 }
 
-/* line 1, ../sass/components/header/header.scss */
+/* line 1, ../sass/components/header/_header.scss */
 header {
   margin-bottom: 2em;
+}
+
+/* line 5, ../sass/components/header/_header.scss */
+.top-bar .yearsel {
+  margin: 0 2em;
 }

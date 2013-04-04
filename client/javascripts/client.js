@@ -5,6 +5,7 @@
 Session.setDefault('editing', null);
 Session.setDefault('currentPage', "home");
 Session.setDefault('isearning', true);
+Session.setDefault('year', 13);
 
 var dataHandle = null;
 
@@ -33,9 +34,11 @@ var savedata = function(selector) {
       vat = $(selector + " .dt__column__input--vat").val(),
       cat = $(selector + " .dt__column__input--cat").val(),
       cattext = $(selector+" .dt__column__input--cat option[value='" + cat + "']").html();
+      year = parseYear(date);
   Data.insert({
                 user_id: user_id,
                 date: date,
+                year: year,
                 docnr: docnr,
                 text: text,
                 amount: amount,
@@ -55,8 +58,10 @@ var updatedata = function(id, selector) {
       vat = $(selector+" .dt__column__input--vat").val(),
       cat = $(selector+" .dt__column__input--cat").val(),
       cattext = $(selector+" .dt__column__input--cat option[value='" + cat + "']").html();
+      year = parseYear(date);
   Data.update(id,{$set: {
                 date: date,
+                year: year,
                 docnr: docnr,
                 text: text,
                 amount: amount,
@@ -66,6 +71,21 @@ var updatedata = function(id, selector) {
                 cattext: cattext
   }});
 };
+//////////// Header ///////////////
+
+Template.yearsel.rendered = function() {
+  $(document).foundation();
+};
+
+Template.yearsel.events({
+  // listen to select changes for current year
+  'change .yearsel__select': function () {
+    var sel_year = $(".yearsel__select").val();
+    Session.set('year', sel_year);
+    initcharts(sel_year);
+  }
+});
+
 
 ////////// Data //////////
 
@@ -94,7 +114,8 @@ Template.data.data = function () {
   if (!user_id) {
     return {};
   }
-  var sel = {user_id: user_id};
+  //var sel = {user_id: user_id};
+  var sel = {year: parseInt(Session.get('year'), 10)};
 
   return Data.find(sel, {sort: {date: 1}});
 };
@@ -137,7 +158,7 @@ Template.dt_row.events({
 
 Template.cat_input.isearning = function () {
   if (this._id) {
-    console.log(this._id);
+    //console.log(this._id);
   } else {
     return Session.equals('isearning', true);
   }
@@ -198,58 +219,84 @@ Template.dt_row_cat_input.rendered = function() {
   });
 };
 
-Template.overview.data = function () {
 
+///////////////// Overview //////////////////////////
+
+/*
+Template.overview.data = function () {
+  //initcharts(Session.get('year'));
+  return Session.get('year');
 };
 
+Template.overview.init = function(year) {
+  //initcharts(year);
+  console.log("ding: "+year);
+};
+*/
 
-
-function initcharts() {
+function initcharts(year) {
   // Build Chart Data
-  var user_id = Meteor.userId();
-  var sel = {user_id: user_id};
-  var dataItems = Data.find({}, {sort: {date: 1}});
+  var dataItems = Data.find({year: parseInt(year, 10)});
   var arr = dataItems.fetch();
-
-
   var data = {
-    labels : ["January","February","March","April","May","June","July"],
+    labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
     datasets : [
       {
-        fillColor : "rgba(220,220,220,0.5)",
-        strokeColor : "rgba(220,220,220,1)",
-        pointColor : "rgba(220,220,220,1)",
+        fillColor : "rgba(154,205,50,0.5)",
+        strokeColor : "rgba(154,205,50,1)",
+        pointColor : "rgba(154,205,50,1)",
         pointStrokeColor : "#fff",
-        data : [0,0,0,0,0,0,0]
+        data : []
       },
       {
-        fillColor : "rgba(151,187,205,0.5)",
-        strokeColor : "rgba(151,187,205,1)",
-        pointColor : "rgba(151,187,205,1)",
+        fillColor : "rgba(255,69,0,0.0)",
+        strokeColor : "rgba(255,69,0,1)",
+        pointColor : "rgba(255,69,0,1)",
         pointStrokeColor : "#fff",
-        data : [0,0,0,0,0,0,0]
+        data : []
       }
     ]
   };
-  var spending = [];
-  var earning = [];
+  var spending = [0,0,0,0,0,0,0,0,0,0,0,0];
+  var earning = [0,0,0,0,0,0,0,0,0,0,0,0];
   $.each(arr, function() {
-    var amount = parseFloat(this.amount);
-    console.log(amount);
+    var amount = parseFloat(this.amount.replace(",", "."));
+    var month = parseMonth(this.date);
+    var earning_month = earning[month];
+    var spending_month = spending[month];
     if (this.isearning) {
-      earning.push(amount);
+      earning[month] = earning_month+amount;
     } else {
-      spending.push(amount);
+      spending[month] = spending_month+amount;
     }
   });
+
   data.datasets[0].data = earning;
   data.datasets[1].data = spending;
-  console.log(data.datasets[0].data);
-  console.log(data.datasets[1].data);
+
   var ctx = document.getElementById("finance-chart").getContext("2d");
   var myNewChart = new Chart(ctx).Line(data);
 }
 
+function parseMonth(date) {
+  var partials = date.match(/[0-9][0-9]/g);
+  var month = parseInt(partials[1], 10);
+  return month;
+}
+
+function parseYear(date) {
+  var partials = date.match(/[0-9][0-9]/g);
+  var year = parseInt(partials[3], 10);
+  return year;
+}
+
+
 Template.overview.rendered = function() {
-  initcharts();
+  var year = Session.get('year');
+  initcharts(year);
 };
+
+
+// inits 
+// not working
+// initcharts(Session.get('year'));

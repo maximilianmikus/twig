@@ -27,8 +27,13 @@
               <li><a class="navlink" href="print">Drucken</a></li>
               <li class="divider"></li>
             </ul>
-            <ul class="right">
+            <ul class="loginbtns right">
               {{loginButtons align="right"}}
+            </ul>
+            <ul class="yearsel right">
+              {{> yearsel}}
+            </ul>
+            <ul class="flattr right">
               {{> flattr}}
             </ul>
           </section>
@@ -55,5 +60,14 @@
 
 <template name="flattr">
   <div id="flattrbtn"></div>
+</template>
+
+<template name="yearsel">
+  <form class="">
+    <select name="yearsel" class="yearsel__select">
+      <option value="13" selected>2013</option> 
+      <option value="12">2012</option>
+    </select>
+  </form>
 </template>
 
