@@ -953,7 +953,7 @@ $row-width: 75em; // 1200px = 16px * 75
 //
 
 // Background color for the top bar
- $topbar-bg: #fff;
+//  $topbar-bg: #fff;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -963,19 +963,19 @@ $row-width: 75em; // 1200px = 16px * 75
 // $topbar-input-height: 2.45em;
 
 // Controlling the styles for the title in the top bar
-$topbar-title-weight: normal;
+// $topbar-title-weight: normal;
 // $topbar-title-font-size: emCalc(17px);
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: #222;
-$topbar-link-weight: normal;
+// $topbar-link-color: #222;
+// $topbar-link-weight: normal;
 // $topbar-link-font-size: emCalc(13px);
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: #fff;
-$topbar-dropdown-link-color: #222;
+// $topbar-dropdown-bg: #fff;
+// $topbar-dropdown-link-color: #222;
 // $topbar-dropdown-toggle-size: 5px;
-$topbar-dropdown-toggle-color: #222;
+// $topbar-dropdown-toggle-color: #222;
 // $topbar-dropdown-toggle-alpha: 0.5;
 // $dropdown-label-color: #555;
 
@@ -983,10 +983,10 @@ $topbar-dropdown-toggle-color: #222;
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: emCalc(13px);
 // $topbar-menu-link-weight: bold;
-$topbar-menu-link-color: #222;
-$topbar-menu-icon-color: #222;
-$topbar-menu-link-color-toggled: #888;
-$topbar-menu-icon-color-toggled: #888;
+// $topbar-menu-link-color: #222;
+// $topbar-menu-icon-color: #222;
+// $topbar-menu-link-color-toggled: #888;
+// $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
