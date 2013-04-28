@@ -95,8 +95,8 @@
           <div class="save button small success">&#10004;</div>
           <div class="discard button small secondary">&#10006;</div>
         {{else}}
-        <div class="edit button small secondary">&#9998;</div>
-        <div class="destroy button small alert">&#10006;</div>
+          <div class="edit button small secondary">&#9998;</div>
+          <div class="destroy button small alert">&#10006;</div>
         {{/if}}
       </div>
     </div>
@@ -120,11 +120,19 @@
       </div>
       <div class="large-2 columns dt__column dt__column--isearning">
         <div class="switch switch-input small">
-          <input id="isearning-yes" name="isearning" type="radio" checked>
-          <label for="isearning-yes">Einnahme</label>
-          <input id="isearning-no" name="isearning" type="radio">
-          <label for="isearning-no">Ausgabe</label>
+          {{#if isearning}}
+            <input id="isearning-yes" name="isearning" type="radio" checked>
+            <label for="isearning-yes">Einnahme</label>
+            <input id="isearning-no" name="isearning" type="radio">
+            <label for="isearning-no">Ausgabe</label>
+          {{else}}
+            <input id="isearning-yes" name="isearning" type="radio">
+            <label for="isearning-yes">Einnahme</label>
+            <input id="isearning-no" name="isearning" type="radio" checked>
+            <label for="isearning-no">Ausgabe</label>
+          {{/if}}
           <span></span>
+
         </div>
       </div>
       <div class="large-1 columns dt__column dt__column--vat">

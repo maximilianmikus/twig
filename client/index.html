@@ -27,6 +27,9 @@
               <li><a class="navlink" href="print">Drucken</a></li>
               <li class="divider"></li>
             </ul>
+            <ul class="totals left">
+              {{> total}}
+            </ul>
             <ul class="loginbtns right">
               {{loginButtons align="right"}}
             </ul>
@@ -45,7 +48,6 @@
     {{renderPage}}
   </div>
   <footer role="footer">
-
   </footer>
 </body>
 
@@ -65,8 +67,8 @@
 <template name="yearsel">
   <form class="">
     <select name="yearsel" class="yearsel__select">
-      <option value="13" selected>2013</option> 
-      <option value="12">2012</option>
+      <option value="2013" selected>2013</option>
+      <option value="2012">2012</option>
     </select>
   </form>
 </template>
