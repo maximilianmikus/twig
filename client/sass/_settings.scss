@@ -1,5 +1,4 @@
-// Required global settings and mixins for Foundation
-@import "foundation/foundation-global";
+
 
 // Settings file to override Foundation variables
 
@@ -31,7 +30,9 @@
 // $primary-color: #2ba6cb;
 // $secondary-color: #e9e9e9;
 // $alert-color: #c60f13;
+$alert-color: #c60f13;
 // $success-color: #5da423;
+$success-color: #5da423;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
