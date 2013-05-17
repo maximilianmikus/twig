@@ -1,7 +1,7 @@
 //////////// Header ///////////////
 
 Template.yearsel.rendered = function() {
-  $(document).foundation();
+  //$(document).foundation();
 };
 
 Template.yearsel.events({

@@ -77,6 +77,7 @@ Template.data.data = function () {
     return {};
   }
   var sel = {year: parseInt(Session.get('year'), 10)};
+  //console.log(Data.find(sel, {sort: {date: 1}}));
 
   return Data.find(sel, {sort: {date: 1}});
 };
@@ -115,6 +116,17 @@ Template.dt_row.events({
     var sel = "#"+id;
     updatedata(id, sel);
     Session.set('editing', null);
+  },
+  'click .switch-input': function () {
+    var id = this._id;
+    var isearning = $("#isearning-yes-" + id).prop("checked");
+    Data.update(id,{$set: {isearning: isearning}});
+  },
+  'change select': function () {
+    var id = this._id;
+    var cat = $("#" + id +" .dt__column__input--cat").val();
+    var cattext = $("#" + id +" .dt__column__input--cat option[value='" + cat + "']").html();
+    Data.update(id,{$set: {cat: cat, cattext: cattext}});
   }
 });
 
@@ -140,33 +152,47 @@ Template.dt_row_amount_input.id = function () {
 ////////// Initializing the page ///////////////
 
 Template.data.rendered = function () {
-  $(document).foundation();
+  //$(document).foundation();
 };
 
 
-//////////// Data table edit init /////////////////
+//////////// Data table edit /////////////////
 
 Template.dt_row_vat.rendered = function () {
   var id = this.data._id,
       value = this.data.vat,
       selector = "#" + id;
   $(selector+" .dt__column__input--vat option[value='" + value + "']").prop("selected", true);
-  $(document).foundation();
 };
 
-Template.dt_row_cat_input.rendered = function () {
-  var id = this.data._id,
-      value = this.data.cat,
-      selector = "#" + id;
-  $(selector+" .dt__column__input--cat option").removeAttr("selected");
-  $(selector+" .dt__column__input--cat option[value='" + value + "']").attr("selected", true);
-  $(selector+" .dt__column__input--cat option[value='" + value + "']").addClass("selected");
-  // @todo: get dropdowns working
-  $(document).foundation('dropdown', function (response) {
-    //console.log("ding");
-  });
+Template.dt_row_cat_input.categories = function () {
+  var cat = this.cat;
+  var config = Config.findOne({});
+  if(this.isearning) {
+    $.each(config.categories.earning, function (index, value) {
+      if(value.id == cat) {
+        value.selected = true;
+      }
+    });
+    return config.categories.earning;
+  } else {
+    return config.categories.spending;
+  }
 };
 
+/*
+Template.dt_row_cat_input.debug = function (optionalValue) {
+  console.log("Current Context");
+  console.log("====================");
+  console.log(this);
+
+  if (optionalValue) {
+    console.log("Value");
+    console.log("====================");
+    console.log(optionalValue);
+  }
+};
+*/
 
 // Helpers
 

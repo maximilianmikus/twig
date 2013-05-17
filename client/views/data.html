@@ -132,7 +132,6 @@
             <label for="isearning-no">Ausgabe</label>
           {{/if}}
           <span></span>
-
         </div>
       </div>
       <div class="large-1 columns dt__column dt__column--vat">
@@ -215,29 +214,13 @@
 
 
 <template name="dt_row_cat_input">
-  {{#if isearning}}
-  <select name="cat-{{id}}" class="dt__column__input--cat">
-    <option value="0001" selected>Betriebseinnahmen</option> 
-    <option value="0002">Betriebseinnahmen, keine Meldepflicht</option>
-    <option value="0003">Anlagenerträge</option>
-    <option value="0004">Übrige Betriebseinnahmen</option>
+  <select name="cat-{{_id}}" class="dt__column__input--cat">
+  {{#each categories}}
+    {{#if selected}}
+      <option value="{{id}}" selected>{{text}}</option>
+    {{else}}
+      <option value="{{id}}">{{text}}</option>
+    {{/if}}
+  {{/each}}
   </select>
-  {{else}}
-  <select name="cat-{{id}}" class="dt__column__input--cat">
-    <option value="1001" selected>Waren- Roh- und Hilfsstoffe</option> 
-    <option value="1002">Beigestelltes Personal</option>
-    <option value="1003">Personalaufwand</option>
-    <option value="1004">AfA</option>
-    <option value="1005">Instandhaltung f. Gebäude</option>
-    <option value="1006">Reise-und Fahrtspäsen</option>
-    <option value="1007">KFZ-Kosten</option>
-    <option value="1008">Miete, Pacht, Leasing</option>
-    <option value="1009">Provisionen, Lizenzen</option>
-    <option value="1010">Werbeaufwändung</option>
-    <option value="1011">Buchwert abgegangener Anlagen</option>
-    <option value="1012">Zinsen &amp; ähnliches</option>
-    <option value="1013">Pflichtversicherung</option>
-    <option value="1014">Übrige Betriebsausgaben</option>
-  </select>
-  {{/if}}
 </template>
