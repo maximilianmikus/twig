@@ -1,7 +1,11 @@
 //////////// Header ///////////////
 
-Template.yearsel.rendered = function() {
-  //$(document).foundation();
+Template.main_menu.is_active = function(page) {
+  if(Session.equals("active-page", page)) {
+    return "active";
+  } else {
+    return "inactive";
+  }
 };
 
 Template.yearsel.events({

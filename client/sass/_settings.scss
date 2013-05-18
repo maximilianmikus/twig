@@ -1185,8 +1185,12 @@ $topbar-margin-bottom: 0;
 
 // $topbar-link-color: #fff;
 $topbar-link-color: #777;
-$topbar-link-color-hover: darken($topbar-link-color, 10%);
+$topbar-link-color-hover: #333;
 $topbar-link-color-active: #fff;
+$topbar-link-bg-active: #e5e5e5;
+$topbar-link-color-active: #555555;
+$topbar-link-font-shadow-color: #fff;
+$topbar-link-bg-hover: #e5e5e5;
 // $topbar-link-weight: bold;
 $topbar-link-weight: normal;
 // $topbar-link-font-size: emCalc(13px);

@@ -10,8 +10,7 @@
           <ul class="title-area">
             <!-- Title Area -->
             <li class="name">
-              <!-- <img src="twig.png" class="left"> -->
-              <h1><a href="#">Twig</a></h1>
+              <h1><a href="#"><img src="coin_stack_gold_2.png"></a></h1>
             </li>
             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
             <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
@@ -19,9 +18,7 @@
           <section class="top-bar-section">
             <!-- Left Nav Section -->
             <ul class="main-nav left">
-              <li class="data"><a class="navlink" href="data">Rechnung</a></li>
-              <li class="overview"><a class="navlink" href="overview">Übersicht</a></li>
-              <li class="print"><a class="navlink" href="print">Drucken</a></li>
+              {{> main_menu}}
             </ul>
             <ul class="totals left">
               {{> total}}

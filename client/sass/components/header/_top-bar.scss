@@ -34,6 +34,7 @@ $topbar-link-font-size:                emCalc(13px) !default;
 $topbar-link-hover-lightness:          -30% !default; // Darken by 30%
 $topbar-link-bg-hover:                 darken($topbar-bg, 3%) !default;
 $topbar-link-bg-active:                darken($topbar-bg, 3%) !default;
+$topbar-link-font-shadow-color:        #fff !default;
 
 $topbar-dropdown-label-color:          #555 !default;
 $topbar-dropdown-label-text-transform: uppercase !default;
@@ -237,6 +238,7 @@ $topbar-sticky-class:                  ".sticky" !default;
         font-size: $topbar-link-font-size;
         font-weight: $topbar-link-weight;
         background: $topbar-dropdown-bg;
+        text-shadow: 0 1px 0 $topbar-link-font-shadow-color;
 
         &:hover {
           background: $topbar-link-bg-hover;
@@ -274,8 +276,12 @@ $topbar-sticky-class:                  ".sticky" !default;
 
       // Apply the active link color when it has that class
       &.active > a {
+        @include box-shadow(inset 0 3px 8px rgba(0, 0, 0, 0.125));
         background: $topbar-link-bg-active;
         color: $topbar-link-color-active;
+        &:hover {
+          background: $topbar-link-bg-active;
+        }
       }
     }
 
