@@ -1163,7 +1163,7 @@ $switch-negative-color: lighten($success-color, 50%);;
 // Background color for the top bar
 
 // $topbar-bg: #111;
-$topbar-bg: transparent;
+$topbar-bg: rgba(0,0,0,0.0);
 
 // Height and margin
 
@@ -1185,6 +1185,8 @@ $topbar-margin-bottom: 0;
 
 // $topbar-link-color: #fff;
 $topbar-link-color: #777;
+$topbar-link-color-hover: darken($topbar-link-color, 10%);
+$topbar-link-color-active: #fff;
 // $topbar-link-weight: bold;
 $topbar-link-weight: normal;
 // $topbar-link-font-size: emCalc(13px);
@@ -1193,7 +1195,7 @@ $topbar-link-weight: normal;
 // Top bar dropdown elements
 
 // $topbar-dropdown-bg: #333;
-$topbar-dropdown-bg: transparent;
+$topbar-dropdown-bg: rgba(0,0,0,0.0);
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;

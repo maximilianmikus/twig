@@ -9,3 +9,8 @@ header {
 .top-bar .yearsel {
   margin: 0 2em;
 }
+.yearsel__select {
+  border: none;
+  margin-top: 0.3em;
+  font-size: emCalc(14px);
+}

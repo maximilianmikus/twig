@@ -29,16 +29,14 @@ Meteor.Router.add({
   '': 'home',
 
   '/:page': function(page) {
+    Session.set('active-page', page);
     return page;
   },
 
   '*': 'not_found'
 });
 
-
-
-
-
+/*
 Meteor.startup(function () {
   var uid = Meteor.userId();
   Config.insert({
@@ -69,3 +67,4 @@ Meteor.startup(function () {
     }
   });
 });
+*/

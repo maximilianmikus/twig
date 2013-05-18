@@ -18,10 +18,10 @@
           </ul>
           <section class="top-bar-section">
             <!-- Left Nav Section -->
-            <ul class="left">
-              <li><a class="navlink" href="data">Rechnung</a></li>
-              <li><a class="navlink" href="overview">Übersicht</a></li>
-              <li><a class="navlink" href="print">Drucken</a></li>
+            <ul class="main-nav left">
+              <li class="data"><a class="navlink" href="data">Rechnung</a></li>
+              <li class="overview"><a class="navlink" href="overview">Übersicht</a></li>
+              <li class="print"><a class="navlink" href="print">Drucken</a></li>
             </ul>
             <ul class="totals left">
               {{> total}}
@@ -59,13 +59,3 @@
 <template name="flattr">
   <div id="flattrbtn"></div>
 </template>
-
-<template name="yearsel">
-  <form class="">
-    <select name="yearsel" class="yearsel__select">
-      <option value="2013" selected>2013</option>
-      <option value="2012">2012</option>
-    </select>
-  </form>
-</template>
-
