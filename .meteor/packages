@@ -9,7 +9,7 @@ backbone
 jquery
 d3
 accounts-password
-accounts-ui
 underscore
 spiderable
 accounting
+accounts-ui-unstyled

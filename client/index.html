@@ -38,7 +38,11 @@
     </div>
   </header>
   <div role="main" class="container">
+  {{#if loggedin}}
     {{renderPage}}
+  {{else}}
+    {{> loggedout}}
+  {{/if}}
   </div>
   <footer role="footer">
   </footer>
