@@ -1,0 +1,61 @@
+.top-bar-section .loginbtns {
+  margin-top: 0.4em;
+  position: relative;
+  z-index: 1000;
+  #login-buttons {
+    width: 16em;
+    text-align: right;
+  }
+}
+
+.login-link-and-dropdown-list {
+  .accounts-dialog {
+    position: absolute;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+    width: 16em;
+  }
+  .message.error-message {
+    color: lightcoral;
+  }
+  input {
+    margin-bottom: 1em;
+  }
+}
+
+.top-bar .login-button,
+.top-bar .additional-link-container > a,
+.top-bar .login-close-text {
+  @extend .button;
+  margin-bottom: 0.5em;
+  float: left;
+  margin-right: 0.5em;
+}
+
+#signup-link {
+  @extend .success;
+}
+
+#login-buttons-password {
+  @extend .primary;
+}
+
+#forgot-password-link {
+  @extend .secondary;
+}
+
+#login-buttons-logout {
+  @extend .secondary;
+}
+
+#login-buttons-open-change-password {
+  @extend .secondary;
+}
+
+.top-bar .login-close-text {
+  @extend .secondary;
+  float: right;
+}
