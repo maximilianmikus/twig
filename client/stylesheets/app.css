@@ -2064,7 +2064,9 @@ blockquote p {
   }
 }
 /* line 168, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button, .button {
+button, .button, .top-bar .login-button,
+.top-bar .additional-link-container > a,
+.top-bar .login-close-text {
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -2086,57 +2088,122 @@ button, .button {
   color: white;
 }
 /* line 121, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover, button:focus, .button:hover, .top-bar .login-button:hover,
+.top-bar .additional-link-container > a:hover,
+.top-bar .login-close-text:hover, .button:focus, .top-bar .login-button:focus,
+.top-bar .additional-link-container > a:focus,
+.top-bar .login-close-text:focus {
   background-color: #2284a1;
 }
 /* line 132, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover, button:focus, .button:hover, .top-bar .login-button:hover,
+.top-bar .additional-link-container > a:hover,
+.top-bar .login-close-text:hover, .button:focus, .top-bar .login-button:focus,
+.top-bar .additional-link-container > a:focus,
+.top-bar .login-close-text:focus {
   color: white;
 }
 /* line 173, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.secondary, .button.secondary {
+button.secondary, button#forgot-password-link, button#login-buttons-logout, button#login-buttons-open-change-password, .top-bar button.login-close-text, .button.secondary, .top-bar .secondary.login-button, .top-bar .login-button#forgot-password-link, .top-bar .login-button#login-buttons-logout, .top-bar .login-button#login-buttons-open-change-password,
+.top-bar .additional-link-container > a.secondary,
+.top-bar .additional-link-container > a#forgot-password-link,
+.top-bar .additional-link-container > a#login-buttons-logout,
+.top-bar .additional-link-container > a#login-buttons-open-change-password,
+.top-bar .login-close-text, .button#forgot-password-link, .button#login-buttons-logout, .button#login-buttons-open-change-password {
   background-color: #e9e9e9;
   border-color: #d0d0d0;
   color: #333333;
 }
 /* line 121, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+button.secondary:hover, button#forgot-password-link:hover, button#login-buttons-logout:hover, button#login-buttons-open-change-password:hover, .top-bar button.login-close-text:hover, button.secondary:focus, button#forgot-password-link:focus, button#login-buttons-logout:focus, button#login-buttons-open-change-password:focus, .top-bar button.login-close-text:focus, .button.secondary:hover, .top-bar .secondary.login-button:hover, .top-bar .login-button#forgot-password-link:hover, .top-bar .login-button#login-buttons-logout:hover, .top-bar .login-button#login-buttons-open-change-password:hover,
+.top-bar .additional-link-container > a.secondary:hover,
+.top-bar .additional-link-container > a#forgot-password-link:hover,
+.top-bar .additional-link-container > a#login-buttons-logout:hover,
+.top-bar .additional-link-container > a#login-buttons-open-change-password:hover,
+.top-bar .login-close-text:hover, .button#forgot-password-link:hover, .button#login-buttons-logout:hover, .button#login-buttons-open-change-password:hover, .button.secondary:focus, .top-bar .secondary.login-button:focus, .top-bar .login-button#forgot-password-link:focus, .top-bar .login-button#login-buttons-logout:focus, .top-bar .login-button#login-buttons-open-change-password:focus,
+.top-bar .additional-link-container > a.secondary:focus,
+.top-bar .additional-link-container > a#forgot-password-link:focus,
+.top-bar .additional-link-container > a#login-buttons-logout:focus,
+.top-bar .additional-link-container > a#login-buttons-open-change-password:focus,
+.top-bar .login-close-text:focus, .button#forgot-password-link:focus, .button#login-buttons-logout:focus, .button#login-buttons-open-change-password:focus {
   background-color: #d0d0d0;
 }
 /* line 127, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+button.secondary:hover, button#forgot-password-link:hover, button#login-buttons-logout:hover, button#login-buttons-open-change-password:hover, .top-bar button.login-close-text:hover, button.secondary:focus, button#forgot-password-link:focus, button#login-buttons-logout:focus, button#login-buttons-open-change-password:focus, .top-bar button.login-close-text:focus, .button.secondary:hover, .top-bar .secondary.login-button:hover, .top-bar .login-button#forgot-password-link:hover, .top-bar .login-button#login-buttons-logout:hover, .top-bar .login-button#login-buttons-open-change-password:hover,
+.top-bar .additional-link-container > a.secondary:hover,
+.top-bar .additional-link-container > a#forgot-password-link:hover,
+.top-bar .additional-link-container > a#login-buttons-logout:hover,
+.top-bar .additional-link-container > a#login-buttons-open-change-password:hover,
+.top-bar .login-close-text:hover, .button#forgot-password-link:hover, .button#login-buttons-logout:hover, .button#login-buttons-open-change-password:hover, .button.secondary:focus, .top-bar .secondary.login-button:focus, .top-bar .login-button#forgot-password-link:focus, .top-bar .login-button#login-buttons-logout:focus, .top-bar .login-button#login-buttons-open-change-password:focus,
+.top-bar .additional-link-container > a.secondary:focus,
+.top-bar .additional-link-container > a#forgot-password-link:focus,
+.top-bar .additional-link-container > a#login-buttons-logout:focus,
+.top-bar .additional-link-container > a#login-buttons-open-change-password:focus,
+.top-bar .login-close-text:focus, .button#forgot-password-link:focus, .button#login-buttons-logout:focus, .button#login-buttons-open-change-password:focus {
   color: #333333;
 }
 /* line 174, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.success, .button.success {
+button.success, button#signup-link, .button.success, .top-bar .success.login-button, .top-bar .login-button#signup-link,
+.top-bar .additional-link-container > a.success,
+.top-bar .additional-link-container > a#signup-link,
+.top-bar .success.login-close-text,
+.top-bar .login-close-text#signup-link, .button#signup-link {
   background-color: #5da423;
   border-color: #457a1a;
   color: white;
 }
 /* line 121, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+button.success:hover, button#signup-link:hover, button.success:focus, button#signup-link:focus, .button.success:hover, .top-bar .success.login-button:hover, .top-bar .login-button#signup-link:hover,
+.top-bar .additional-link-container > a.success:hover,
+.top-bar .additional-link-container > a#signup-link:hover,
+.top-bar .success.login-close-text:hover,
+.top-bar .login-close-text#signup-link:hover, .button#signup-link:hover, .button.success:focus, .top-bar .success.login-button:focus, .top-bar .login-button#signup-link:focus,
+.top-bar .additional-link-container > a.success:focus,
+.top-bar .additional-link-container > a#signup-link:focus,
+.top-bar .success.login-close-text:focus,
+.top-bar .login-close-text#signup-link:focus, .button#signup-link:focus {
   background-color: #457a1a;
 }
 /* line 132, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+button.success:hover, button#signup-link:hover, button.success:focus, button#signup-link:focus, .button.success:hover, .top-bar .success.login-button:hover, .top-bar .login-button#signup-link:hover,
+.top-bar .additional-link-container > a.success:hover,
+.top-bar .additional-link-container > a#signup-link:hover,
+.top-bar .success.login-close-text:hover,
+.top-bar .login-close-text#signup-link:hover, .button#signup-link:hover, .button.success:focus, .top-bar .success.login-button:focus, .top-bar .login-button#signup-link:focus,
+.top-bar .additional-link-container > a.success:focus,
+.top-bar .additional-link-container > a#signup-link:focus,
+.top-bar .success.login-close-text:focus,
+.top-bar .login-close-text#signup-link:focus, .button#signup-link:focus {
   color: white;
 }
 /* line 175, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.alert, .button.alert {
+button.alert, .button.alert, .top-bar .alert.login-button,
+.top-bar .additional-link-container > a.alert,
+.top-bar .alert.login-close-text {
   background-color: #c60f13;
   border-color: #970b0e;
   color: white;
 }
 /* line 121, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+button.alert:hover, button.alert:focus, .button.alert:hover, .top-bar .alert.login-button:hover,
+.top-bar .additional-link-container > a.alert:hover,
+.top-bar .alert.login-close-text:hover, .button.alert:focus, .top-bar .alert.login-button:focus,
+.top-bar .additional-link-container > a.alert:focus,
+.top-bar .alert.login-close-text:focus {
   background-color: #970b0e;
 }
 /* line 132, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+button.alert:hover, button.alert:focus, .button.alert:hover, .top-bar .alert.login-button:hover,
+.top-bar .additional-link-container > a.alert:hover,
+.top-bar .alert.login-close-text:hover, .button.alert:focus, .top-bar .alert.login-button:focus,
+.top-bar .additional-link-container > a.alert:focus,
+.top-bar .alert.login-close-text:focus {
   color: white;
 }
 /* line 177, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.large, .button.large {
+button.large, .button.large, .top-bar .large.login-button,
+.top-bar .additional-link-container > a.large,
+.top-bar .large.login-close-text {
   padding-top: 1em;
   padding-right: 2em;
   padding-bottom: 1.0625em;
@@ -2144,7 +2211,9 @@ button.large, .button.large {
   font-size: 1.25em;
 }
 /* line 178, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.small, .button.small {
+button.small, .button.small, .top-bar .small.login-button,
+.top-bar .additional-link-container > a.small,
+.top-bar .small.login-close-text {
   padding-top: 0.5625em;
   padding-right: 1.125em;
   padding-bottom: 0.625em;
@@ -2152,7 +2221,9 @@ button.small, .button.small {
   font-size: 0.8125em;
 }
 /* line 179, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.tiny, .button.tiny {
+button.tiny, .button.tiny, .top-bar .tiny.login-button,
+.top-bar .additional-link-container > a.tiny,
+.top-bar .tiny.login-close-text {
   padding-top: 0.4375em;
   padding-right: 0.875em;
   padding-bottom: 0.5em;
@@ -2160,23 +2231,33 @@ button.tiny, .button.tiny {
   font-size: 0.6875em;
 }
 /* line 180, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.expand, .button.expand {
+button.expand, .button.expand, .top-bar .expand.login-button,
+.top-bar .additional-link-container > a.expand,
+.top-bar .expand.login-close-text {
   padding-right: 0px;
   padding-left: 0px;
   width: 100%;
 }
 /* line 182, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.left-align, .button.left-align {
+button.left-align, .button.left-align, .top-bar .left-align.login-button,
+.top-bar .additional-link-container > a.left-align,
+.top-bar .left-align.login-close-text {
   text-align: left;
   text-indent: 0.75em;
 }
 /* line 183, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.right-align, .button.right-align {
+button.right-align, .button.right-align, .top-bar .right-align.login-button,
+.top-bar .additional-link-container > a.right-align,
+.top-bar .right-align.login-close-text {
   text-align: right;
   padding-right: 0.75em;
 }
 /* line 185, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled, button[disabled], .button.disabled, .button[disabled] {
+button.disabled, button[disabled], .button.disabled, .top-bar .disabled.login-button,
+.top-bar .additional-link-container > a.disabled,
+.top-bar .disabled.login-close-text, .button[disabled], .top-bar [disabled].login-button,
+.top-bar .additional-link-container > a[disabled],
+.top-bar [disabled].login-close-text {
   background-color: #2ba6cb;
   border-color: #2284a1;
   color: white;
@@ -2186,19 +2267,53 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] {
   box-shadow: none;
 }
 /* line 121, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .top-bar .disabled.login-button:hover,
+.top-bar .additional-link-container > a.disabled:hover,
+.top-bar .disabled.login-close-text:hover, .button.disabled:focus, .top-bar .disabled.login-button:focus,
+.top-bar .additional-link-container > a.disabled:focus,
+.top-bar .disabled.login-close-text:focus, .button[disabled]:hover, .top-bar [disabled].login-button:hover,
+.top-bar .additional-link-container > a[disabled]:hover,
+.top-bar [disabled].login-close-text:hover, .button[disabled]:focus, .top-bar [disabled].login-button:focus,
+.top-bar .additional-link-container > a[disabled]:focus,
+.top-bar [disabled].login-close-text:focus {
   background-color: #2284a1;
 }
 /* line 132, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .top-bar .disabled.login-button:hover,
+.top-bar .additional-link-container > a.disabled:hover,
+.top-bar .disabled.login-close-text:hover, .button.disabled:focus, .top-bar .disabled.login-button:focus,
+.top-bar .additional-link-container > a.disabled:focus,
+.top-bar .disabled.login-close-text:focus, .button[disabled]:hover, .top-bar [disabled].login-button:hover,
+.top-bar .additional-link-container > a[disabled]:hover,
+.top-bar [disabled].login-close-text:hover, .button[disabled]:focus, .top-bar [disabled].login-button:focus,
+.top-bar .additional-link-container > a[disabled]:focus,
+.top-bar [disabled].login-close-text:focus {
   color: white;
 }
 /* line 143, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .top-bar .disabled.login-button:hover,
+.top-bar .additional-link-container > a.disabled:hover,
+.top-bar .disabled.login-close-text:hover, .button.disabled:focus, .top-bar .disabled.login-button:focus,
+.top-bar .additional-link-container > a.disabled:focus,
+.top-bar .disabled.login-close-text:focus, .button[disabled]:hover, .top-bar [disabled].login-button:hover,
+.top-bar .additional-link-container > a[disabled]:hover,
+.top-bar [disabled].login-close-text:hover, .button[disabled]:focus, .top-bar [disabled].login-button:focus,
+.top-bar .additional-link-container > a[disabled]:focus,
+.top-bar [disabled].login-close-text:focus {
   background-color: #2ba6cb;
 }
 /* line 186, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
+button.disabled.secondary, button.disabled#forgot-password-link, button.disabled#login-buttons-logout, button.disabled#login-buttons-open-change-password, .top-bar button.disabled.login-close-text, button[disabled].secondary, button[disabled]#forgot-password-link, button[disabled]#login-buttons-logout, button[disabled]#login-buttons-open-change-password, .top-bar button[disabled].login-close-text, .button.disabled.secondary, .top-bar .disabled.secondary.login-button, .top-bar .disabled.login-button#forgot-password-link, .top-bar .disabled.login-button#login-buttons-logout, .top-bar .disabled.login-button#login-buttons-open-change-password,
+.top-bar .additional-link-container > a.disabled.secondary,
+.top-bar .additional-link-container > a.disabled#forgot-password-link,
+.top-bar .additional-link-container > a.disabled#login-buttons-logout,
+.top-bar .additional-link-container > a.disabled#login-buttons-open-change-password,
+.top-bar .disabled.login-close-text, .button.disabled#forgot-password-link, .button.disabled#login-buttons-logout, .button.disabled#login-buttons-open-change-password, .button[disabled].secondary, .top-bar [disabled].secondary.login-button, .top-bar [disabled].login-button#forgot-password-link, .top-bar [disabled].login-button#login-buttons-logout, .top-bar [disabled].login-button#login-buttons-open-change-password,
+.top-bar .additional-link-container > a[disabled].secondary,
+.top-bar .additional-link-container > a[disabled]#forgot-password-link,
+.top-bar .additional-link-container > a[disabled]#login-buttons-logout,
+.top-bar .additional-link-container > a[disabled]#login-buttons-open-change-password,
+.top-bar [disabled].login-close-text, .button[disabled]#forgot-password-link, .button[disabled]#login-buttons-logout, .button[disabled]#login-buttons-open-change-password {
   background-color: #e9e9e9;
   border-color: #d0d0d0;
   color: #333333;
@@ -2208,19 +2323,87 @@ button.disabled.secondary, button[disabled].secondary, .button.disabled.secondar
   box-shadow: none;
 }
 /* line 121, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+button.disabled.secondary:hover, button.disabled#forgot-password-link:hover, button.disabled#login-buttons-logout:hover, button.disabled#login-buttons-open-change-password:hover, .top-bar button.disabled.login-close-text:hover, button.disabled.secondary:focus, button.disabled#forgot-password-link:focus, button.disabled#login-buttons-logout:focus, button.disabled#login-buttons-open-change-password:focus, .top-bar button.disabled.login-close-text:focus, button[disabled].secondary:hover, button[disabled]#forgot-password-link:hover, button[disabled]#login-buttons-logout:hover, button[disabled]#login-buttons-open-change-password:hover, .top-bar button[disabled].login-close-text:hover, button[disabled].secondary:focus, button[disabled]#forgot-password-link:focus, button[disabled]#login-buttons-logout:focus, button[disabled]#login-buttons-open-change-password:focus, .top-bar button[disabled].login-close-text:focus, .button.disabled.secondary:hover, .top-bar .disabled.secondary.login-button:hover, .top-bar .disabled.login-button#forgot-password-link:hover, .top-bar .disabled.login-button#login-buttons-logout:hover, .top-bar .disabled.login-button#login-buttons-open-change-password:hover,
+.top-bar .additional-link-container > a.disabled.secondary:hover,
+.top-bar .additional-link-container > a.disabled#forgot-password-link:hover,
+.top-bar .additional-link-container > a.disabled#login-buttons-logout:hover,
+.top-bar .additional-link-container > a.disabled#login-buttons-open-change-password:hover,
+.top-bar .disabled.login-close-text:hover, .button.disabled#forgot-password-link:hover, .button.disabled#login-buttons-logout:hover, .button.disabled#login-buttons-open-change-password:hover, .button.disabled.secondary:focus, .top-bar .disabled.secondary.login-button:focus, .top-bar .disabled.login-button#forgot-password-link:focus, .top-bar .disabled.login-button#login-buttons-logout:focus, .top-bar .disabled.login-button#login-buttons-open-change-password:focus,
+.top-bar .additional-link-container > a.disabled.secondary:focus,
+.top-bar .additional-link-container > a.disabled#forgot-password-link:focus,
+.top-bar .additional-link-container > a.disabled#login-buttons-logout:focus,
+.top-bar .additional-link-container > a.disabled#login-buttons-open-change-password:focus,
+.top-bar .disabled.login-close-text:focus, .button.disabled#forgot-password-link:focus, .button.disabled#login-buttons-logout:focus, .button.disabled#login-buttons-open-change-password:focus, .button[disabled].secondary:hover, .top-bar [disabled].secondary.login-button:hover, .top-bar [disabled].login-button#forgot-password-link:hover, .top-bar [disabled].login-button#login-buttons-logout:hover, .top-bar [disabled].login-button#login-buttons-open-change-password:hover,
+.top-bar .additional-link-container > a[disabled].secondary:hover,
+.top-bar .additional-link-container > a[disabled]#forgot-password-link:hover,
+.top-bar .additional-link-container > a[disabled]#login-buttons-logout:hover,
+.top-bar .additional-link-container > a[disabled]#login-buttons-open-change-password:hover,
+.top-bar [disabled].login-close-text:hover, .button[disabled]#forgot-password-link:hover, .button[disabled]#login-buttons-logout:hover, .button[disabled]#login-buttons-open-change-password:hover, .button[disabled].secondary:focus, .top-bar [disabled].secondary.login-button:focus, .top-bar [disabled].login-button#forgot-password-link:focus, .top-bar [disabled].login-button#login-buttons-logout:focus, .top-bar [disabled].login-button#login-buttons-open-change-password:focus,
+.top-bar .additional-link-container > a[disabled].secondary:focus,
+.top-bar .additional-link-container > a[disabled]#forgot-password-link:focus,
+.top-bar .additional-link-container > a[disabled]#login-buttons-logout:focus,
+.top-bar .additional-link-container > a[disabled]#login-buttons-open-change-password:focus,
+.top-bar [disabled].login-close-text:focus, .button[disabled]#forgot-password-link:focus, .button[disabled]#login-buttons-logout:focus, .button[disabled]#login-buttons-open-change-password:focus {
   background-color: #d0d0d0;
 }
 /* line 127, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+button.disabled.secondary:hover, button.disabled#forgot-password-link:hover, button.disabled#login-buttons-logout:hover, button.disabled#login-buttons-open-change-password:hover, .top-bar button.disabled.login-close-text:hover, button.disabled.secondary:focus, button.disabled#forgot-password-link:focus, button.disabled#login-buttons-logout:focus, button.disabled#login-buttons-open-change-password:focus, .top-bar button.disabled.login-close-text:focus, button[disabled].secondary:hover, button[disabled]#forgot-password-link:hover, button[disabled]#login-buttons-logout:hover, button[disabled]#login-buttons-open-change-password:hover, .top-bar button[disabled].login-close-text:hover, button[disabled].secondary:focus, button[disabled]#forgot-password-link:focus, button[disabled]#login-buttons-logout:focus, button[disabled]#login-buttons-open-change-password:focus, .top-bar button[disabled].login-close-text:focus, .button.disabled.secondary:hover, .top-bar .disabled.secondary.login-button:hover, .top-bar .disabled.login-button#forgot-password-link:hover, .top-bar .disabled.login-button#login-buttons-logout:hover, .top-bar .disabled.login-button#login-buttons-open-change-password:hover,
+.top-bar .additional-link-container > a.disabled.secondary:hover,
+.top-bar .additional-link-container > a.disabled#forgot-password-link:hover,
+.top-bar .additional-link-container > a.disabled#login-buttons-logout:hover,
+.top-bar .additional-link-container > a.disabled#login-buttons-open-change-password:hover,
+.top-bar .disabled.login-close-text:hover, .button.disabled#forgot-password-link:hover, .button.disabled#login-buttons-logout:hover, .button.disabled#login-buttons-open-change-password:hover, .button.disabled.secondary:focus, .top-bar .disabled.secondary.login-button:focus, .top-bar .disabled.login-button#forgot-password-link:focus, .top-bar .disabled.login-button#login-buttons-logout:focus, .top-bar .disabled.login-button#login-buttons-open-change-password:focus,
+.top-bar .additional-link-container > a.disabled.secondary:focus,
+.top-bar .additional-link-container > a.disabled#forgot-password-link:focus,
+.top-bar .additional-link-container > a.disabled#login-buttons-logout:focus,
+.top-bar .additional-link-container > a.disabled#login-buttons-open-change-password:focus,
+.top-bar .disabled.login-close-text:focus, .button.disabled#forgot-password-link:focus, .button.disabled#login-buttons-logout:focus, .button.disabled#login-buttons-open-change-password:focus, .button[disabled].secondary:hover, .top-bar [disabled].secondary.login-button:hover, .top-bar [disabled].login-button#forgot-password-link:hover, .top-bar [disabled].login-button#login-buttons-logout:hover, .top-bar [disabled].login-button#login-buttons-open-change-password:hover,
+.top-bar .additional-link-container > a[disabled].secondary:hover,
+.top-bar .additional-link-container > a[disabled]#forgot-password-link:hover,
+.top-bar .additional-link-container > a[disabled]#login-buttons-logout:hover,
+.top-bar .additional-link-container > a[disabled]#login-buttons-open-change-password:hover,
+.top-bar [disabled].login-close-text:hover, .button[disabled]#forgot-password-link:hover, .button[disabled]#login-buttons-logout:hover, .button[disabled]#login-buttons-open-change-password:hover, .button[disabled].secondary:focus, .top-bar [disabled].secondary.login-button:focus, .top-bar [disabled].login-button#forgot-password-link:focus, .top-bar [disabled].login-button#login-buttons-logout:focus, .top-bar [disabled].login-button#login-buttons-open-change-password:focus,
+.top-bar .additional-link-container > a[disabled].secondary:focus,
+.top-bar .additional-link-container > a[disabled]#forgot-password-link:focus,
+.top-bar .additional-link-container > a[disabled]#login-buttons-logout:focus,
+.top-bar .additional-link-container > a[disabled]#login-buttons-open-change-password:focus,
+.top-bar [disabled].login-close-text:focus, .button[disabled]#forgot-password-link:focus, .button[disabled]#login-buttons-logout:focus, .button[disabled]#login-buttons-open-change-password:focus {
   color: #333333;
 }
 /* line 143, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+button.disabled.secondary:hover, button.disabled#forgot-password-link:hover, button.disabled#login-buttons-logout:hover, button.disabled#login-buttons-open-change-password:hover, .top-bar button.disabled.login-close-text:hover, button.disabled.secondary:focus, button.disabled#forgot-password-link:focus, button.disabled#login-buttons-logout:focus, button.disabled#login-buttons-open-change-password:focus, .top-bar button.disabled.login-close-text:focus, button[disabled].secondary:hover, button[disabled]#forgot-password-link:hover, button[disabled]#login-buttons-logout:hover, button[disabled]#login-buttons-open-change-password:hover, .top-bar button[disabled].login-close-text:hover, button[disabled].secondary:focus, button[disabled]#forgot-password-link:focus, button[disabled]#login-buttons-logout:focus, button[disabled]#login-buttons-open-change-password:focus, .top-bar button[disabled].login-close-text:focus, .button.disabled.secondary:hover, .top-bar .disabled.secondary.login-button:hover, .top-bar .disabled.login-button#forgot-password-link:hover, .top-bar .disabled.login-button#login-buttons-logout:hover, .top-bar .disabled.login-button#login-buttons-open-change-password:hover,
+.top-bar .additional-link-container > a.disabled.secondary:hover,
+.top-bar .additional-link-container > a.disabled#forgot-password-link:hover,
+.top-bar .additional-link-container > a.disabled#login-buttons-logout:hover,
+.top-bar .additional-link-container > a.disabled#login-buttons-open-change-password:hover,
+.top-bar .disabled.login-close-text:hover, .button.disabled#forgot-password-link:hover, .button.disabled#login-buttons-logout:hover, .button.disabled#login-buttons-open-change-password:hover, .button.disabled.secondary:focus, .top-bar .disabled.secondary.login-button:focus, .top-bar .disabled.login-button#forgot-password-link:focus, .top-bar .disabled.login-button#login-buttons-logout:focus, .top-bar .disabled.login-button#login-buttons-open-change-password:focus,
+.top-bar .additional-link-container > a.disabled.secondary:focus,
+.top-bar .additional-link-container > a.disabled#forgot-password-link:focus,
+.top-bar .additional-link-container > a.disabled#login-buttons-logout:focus,
+.top-bar .additional-link-container > a.disabled#login-buttons-open-change-password:focus,
+.top-bar .disabled.login-close-text:focus, .button.disabled#forgot-password-link:focus, .button.disabled#login-buttons-logout:focus, .button.disabled#login-buttons-open-change-password:focus, .button[disabled].secondary:hover, .top-bar [disabled].secondary.login-button:hover, .top-bar [disabled].login-button#forgot-password-link:hover, .top-bar [disabled].login-button#login-buttons-logout:hover, .top-bar [disabled].login-button#login-buttons-open-change-password:hover,
+.top-bar .additional-link-container > a[disabled].secondary:hover,
+.top-bar .additional-link-container > a[disabled]#forgot-password-link:hover,
+.top-bar .additional-link-container > a[disabled]#login-buttons-logout:hover,
+.top-bar .additional-link-container > a[disabled]#login-buttons-open-change-password:hover,
+.top-bar [disabled].login-close-text:hover, .button[disabled]#forgot-password-link:hover, .button[disabled]#login-buttons-logout:hover, .button[disabled]#login-buttons-open-change-password:hover, .button[disabled].secondary:focus, .top-bar [disabled].secondary.login-button:focus, .top-bar [disabled].login-button#forgot-password-link:focus, .top-bar [disabled].login-button#login-buttons-logout:focus, .top-bar [disabled].login-button#login-buttons-open-change-password:focus,
+.top-bar .additional-link-container > a[disabled].secondary:focus,
+.top-bar .additional-link-container > a[disabled]#forgot-password-link:focus,
+.top-bar .additional-link-container > a[disabled]#login-buttons-logout:focus,
+.top-bar .additional-link-container > a[disabled]#login-buttons-open-change-password:focus,
+.top-bar [disabled].login-close-text:focus, .button[disabled]#forgot-password-link:focus, .button[disabled]#login-buttons-logout:focus, .button[disabled]#login-buttons-open-change-password:focus {
   background-color: #e9e9e9;
 }
 /* line 187, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
+button.disabled.success, button.disabled#signup-link, button[disabled].success, button[disabled]#signup-link, .button.disabled.success, .top-bar .disabled.success.login-button, .top-bar .disabled.login-button#signup-link,
+.top-bar .additional-link-container > a.disabled.success,
+.top-bar .additional-link-container > a.disabled#signup-link,
+.top-bar .disabled.success.login-close-text,
+.top-bar .disabled.login-close-text#signup-link, .button.disabled#signup-link, .button[disabled].success, .top-bar [disabled].success.login-button, .top-bar [disabled].login-button#signup-link,
+.top-bar .additional-link-container > a[disabled].success,
+.top-bar .additional-link-container > a[disabled]#signup-link,
+.top-bar [disabled].success.login-close-text,
+.top-bar [disabled].login-close-text#signup-link, .button[disabled]#signup-link {
   background-color: #5da423;
   border-color: #457a1a;
   color: white;
@@ -2230,19 +2413,71 @@ button.disabled.success, button[disabled].success, .button.disabled.success, .bu
   box-shadow: none;
 }
 /* line 121, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+button.disabled.success:hover, button.disabled#signup-link:hover, button.disabled.success:focus, button.disabled#signup-link:focus, button[disabled].success:hover, button[disabled]#signup-link:hover, button[disabled].success:focus, button[disabled]#signup-link:focus, .button.disabled.success:hover, .top-bar .disabled.success.login-button:hover, .top-bar .disabled.login-button#signup-link:hover,
+.top-bar .additional-link-container > a.disabled.success:hover,
+.top-bar .additional-link-container > a.disabled#signup-link:hover,
+.top-bar .disabled.success.login-close-text:hover,
+.top-bar .disabled.login-close-text#signup-link:hover, .button.disabled#signup-link:hover, .button.disabled.success:focus, .top-bar .disabled.success.login-button:focus, .top-bar .disabled.login-button#signup-link:focus,
+.top-bar .additional-link-container > a.disabled.success:focus,
+.top-bar .additional-link-container > a.disabled#signup-link:focus,
+.top-bar .disabled.success.login-close-text:focus,
+.top-bar .disabled.login-close-text#signup-link:focus, .button.disabled#signup-link:focus, .button[disabled].success:hover, .top-bar [disabled].success.login-button:hover, .top-bar [disabled].login-button#signup-link:hover,
+.top-bar .additional-link-container > a[disabled].success:hover,
+.top-bar .additional-link-container > a[disabled]#signup-link:hover,
+.top-bar [disabled].success.login-close-text:hover,
+.top-bar [disabled].login-close-text#signup-link:hover, .button[disabled]#signup-link:hover, .button[disabled].success:focus, .top-bar [disabled].success.login-button:focus, .top-bar [disabled].login-button#signup-link:focus,
+.top-bar .additional-link-container > a[disabled].success:focus,
+.top-bar .additional-link-container > a[disabled]#signup-link:focus,
+.top-bar [disabled].success.login-close-text:focus,
+.top-bar [disabled].login-close-text#signup-link:focus, .button[disabled]#signup-link:focus {
   background-color: #457a1a;
 }
 /* line 132, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+button.disabled.success:hover, button.disabled#signup-link:hover, button.disabled.success:focus, button.disabled#signup-link:focus, button[disabled].success:hover, button[disabled]#signup-link:hover, button[disabled].success:focus, button[disabled]#signup-link:focus, .button.disabled.success:hover, .top-bar .disabled.success.login-button:hover, .top-bar .disabled.login-button#signup-link:hover,
+.top-bar .additional-link-container > a.disabled.success:hover,
+.top-bar .additional-link-container > a.disabled#signup-link:hover,
+.top-bar .disabled.success.login-close-text:hover,
+.top-bar .disabled.login-close-text#signup-link:hover, .button.disabled#signup-link:hover, .button.disabled.success:focus, .top-bar .disabled.success.login-button:focus, .top-bar .disabled.login-button#signup-link:focus,
+.top-bar .additional-link-container > a.disabled.success:focus,
+.top-bar .additional-link-container > a.disabled#signup-link:focus,
+.top-bar .disabled.success.login-close-text:focus,
+.top-bar .disabled.login-close-text#signup-link:focus, .button.disabled#signup-link:focus, .button[disabled].success:hover, .top-bar [disabled].success.login-button:hover, .top-bar [disabled].login-button#signup-link:hover,
+.top-bar .additional-link-container > a[disabled].success:hover,
+.top-bar .additional-link-container > a[disabled]#signup-link:hover,
+.top-bar [disabled].success.login-close-text:hover,
+.top-bar [disabled].login-close-text#signup-link:hover, .button[disabled]#signup-link:hover, .button[disabled].success:focus, .top-bar [disabled].success.login-button:focus, .top-bar [disabled].login-button#signup-link:focus,
+.top-bar .additional-link-container > a[disabled].success:focus,
+.top-bar .additional-link-container > a[disabled]#signup-link:focus,
+.top-bar [disabled].success.login-close-text:focus,
+.top-bar [disabled].login-close-text#signup-link:focus, .button[disabled]#signup-link:focus {
   color: white;
 }
 /* line 143, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+button.disabled.success:hover, button.disabled#signup-link:hover, button.disabled.success:focus, button.disabled#signup-link:focus, button[disabled].success:hover, button[disabled]#signup-link:hover, button[disabled].success:focus, button[disabled]#signup-link:focus, .button.disabled.success:hover, .top-bar .disabled.success.login-button:hover, .top-bar .disabled.login-button#signup-link:hover,
+.top-bar .additional-link-container > a.disabled.success:hover,
+.top-bar .additional-link-container > a.disabled#signup-link:hover,
+.top-bar .disabled.success.login-close-text:hover,
+.top-bar .disabled.login-close-text#signup-link:hover, .button.disabled#signup-link:hover, .button.disabled.success:focus, .top-bar .disabled.success.login-button:focus, .top-bar .disabled.login-button#signup-link:focus,
+.top-bar .additional-link-container > a.disabled.success:focus,
+.top-bar .additional-link-container > a.disabled#signup-link:focus,
+.top-bar .disabled.success.login-close-text:focus,
+.top-bar .disabled.login-close-text#signup-link:focus, .button.disabled#signup-link:focus, .button[disabled].success:hover, .top-bar [disabled].success.login-button:hover, .top-bar [disabled].login-button#signup-link:hover,
+.top-bar .additional-link-container > a[disabled].success:hover,
+.top-bar .additional-link-container > a[disabled]#signup-link:hover,
+.top-bar [disabled].success.login-close-text:hover,
+.top-bar [disabled].login-close-text#signup-link:hover, .button[disabled]#signup-link:hover, .button[disabled].success:focus, .top-bar [disabled].success.login-button:focus, .top-bar [disabled].login-button#signup-link:focus,
+.top-bar .additional-link-container > a[disabled].success:focus,
+.top-bar .additional-link-container > a[disabled]#signup-link:focus,
+.top-bar [disabled].success.login-close-text:focus,
+.top-bar [disabled].login-close-text#signup-link:focus, .button[disabled]#signup-link:focus {
   background-color: #5da423;
 }
 /* line 188, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
+button.disabled.alert, button[disabled].alert, .button.disabled.alert, .top-bar .disabled.alert.login-button,
+.top-bar .additional-link-container > a.disabled.alert,
+.top-bar .disabled.alert.login-close-text, .button[disabled].alert, .top-bar [disabled].alert.login-button,
+.top-bar .additional-link-container > a[disabled].alert,
+.top-bar [disabled].alert.login-close-text {
   background-color: #c60f13;
   border-color: #970b0e;
   color: white;
@@ -2252,42 +2487,76 @@ button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[d
   box-shadow: none;
 }
 /* line 121, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .top-bar .disabled.alert.login-button:hover,
+.top-bar .additional-link-container > a.disabled.alert:hover,
+.top-bar .disabled.alert.login-close-text:hover, .button.disabled.alert:focus, .top-bar .disabled.alert.login-button:focus,
+.top-bar .additional-link-container > a.disabled.alert:focus,
+.top-bar .disabled.alert.login-close-text:focus, .button[disabled].alert:hover, .top-bar [disabled].alert.login-button:hover,
+.top-bar .additional-link-container > a[disabled].alert:hover,
+.top-bar [disabled].alert.login-close-text:hover, .button[disabled].alert:focus, .top-bar [disabled].alert.login-button:focus,
+.top-bar .additional-link-container > a[disabled].alert:focus,
+.top-bar [disabled].alert.login-close-text:focus {
   background-color: #970b0e;
 }
 /* line 132, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .top-bar .disabled.alert.login-button:hover,
+.top-bar .additional-link-container > a.disabled.alert:hover,
+.top-bar .disabled.alert.login-close-text:hover, .button.disabled.alert:focus, .top-bar .disabled.alert.login-button:focus,
+.top-bar .additional-link-container > a.disabled.alert:focus,
+.top-bar .disabled.alert.login-close-text:focus, .button[disabled].alert:hover, .top-bar [disabled].alert.login-button:hover,
+.top-bar .additional-link-container > a[disabled].alert:hover,
+.top-bar [disabled].alert.login-close-text:hover, .button[disabled].alert:focus, .top-bar [disabled].alert.login-button:focus,
+.top-bar .additional-link-container > a[disabled].alert:focus,
+.top-bar [disabled].alert.login-close-text:focus {
   color: white;
 }
 /* line 143, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .top-bar .disabled.alert.login-button:hover,
+.top-bar .additional-link-container > a.disabled.alert:hover,
+.top-bar .disabled.alert.login-close-text:hover, .button.disabled.alert:focus, .top-bar .disabled.alert.login-button:focus,
+.top-bar .additional-link-container > a.disabled.alert:focus,
+.top-bar .disabled.alert.login-close-text:focus, .button[disabled].alert:hover, .top-bar [disabled].alert.login-button:hover,
+.top-bar .additional-link-container > a[disabled].alert:hover,
+.top-bar [disabled].alert.login-close-text:hover, .button[disabled].alert:focus, .top-bar [disabled].alert.login-button:focus,
+.top-bar .additional-link-container > a[disabled].alert:focus,
+.top-bar [disabled].alert.login-close-text:focus {
   background-color: #c60f13;
 }
 
 /* line 193, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button, .button {
+button, .button, .top-bar .login-button,
+.top-bar .additional-link-container > a,
+.top-bar .login-close-text {
   padding-top: 0.8125em;
   padding-bottom: 0.75em;
 }
 /* line 195, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.tiny, .button.tiny {
+button.tiny, .button.tiny, .top-bar .tiny.login-button,
+.top-bar .additional-link-container > a.tiny,
+.top-bar .tiny.login-close-text {
   padding-top: 0.5em;
   padding-bottom: 0.4375em;
 }
 /* line 196, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.small, .button.small {
+button.small, .button.small, .top-bar .small.login-button,
+.top-bar .additional-link-container > a.small,
+.top-bar .small.login-close-text {
   padding-top: 0.625em;
   padding-bottom: 0.5625em;
 }
 /* line 197, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-button.large, .button.large {
+button.large, .button.large, .top-bar .large.login-button,
+.top-bar .additional-link-container > a.large,
+.top-bar .large.login-close-text {
   padding-top: 1.03125em;
   padding-bottom: 1.03125em;
 }
 
 @media only screen {
   /* line 203, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-  button, .button {
+  button, .button, .top-bar .login-button,
+  .top-bar .additional-link-container > a,
+  .top-bar .login-close-text {
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     -webkit-transition: background-color 300ms ease-out;
@@ -2295,24 +2564,32 @@ button.large, .button.large {
     transition: background-color 300ms ease-out;
   }
   /* line 54, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_global.scss */
-  button:active, .button:active {
+  button:active, .button:active, .top-bar .login-button:active,
+  .top-bar .additional-link-container > a:active,
+  .top-bar .login-close-text:active {
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
   }
   /* line 211, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-  button.radius, .button.radius {
+  button.radius, .button.radius, .top-bar .radius.login-button,
+  .top-bar .additional-link-container > a.radius,
+  .top-bar .radius.login-close-text {
     -webkit-border-radius: 3px;
     border-radius: 3px;
   }
   /* line 212, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-  button.round, .button.round {
+  button.round, .button.round, .top-bar .round.login-button,
+  .top-bar .additional-link-container > a.round,
+  .top-bar .round.login-close-text {
     -webkit-border-radius: 1000px;
     border-radius: 1000px;
   }
 }
 @media only screen and (min-width: 48em) {
   /* line 220, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_buttons.scss */
-  button, .button {
+  button, .button, .top-bar .login-button,
+  .top-bar .additional-link-container > a,
+  .top-bar .login-close-text {
     display: inline-block;
   }
 }
@@ -2391,7 +2668,9 @@ label.inline {
 
 /* Adjust padding, alignment and radius if pre/post element is a button */
 /* line 272, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_forms.scss */
-.postfix.button {
+.postfix.button, .top-bar .postfix.login-button,
+.top-bar .additional-link-container > a.postfix,
+.top-bar .postfix.login-close-text {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -2401,7 +2680,9 @@ label.inline {
 }
 
 /* line 273, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_forms.scss */
-.prefix.button {
+.prefix.button, .top-bar .prefix.login-button,
+.top-bar .additional-link-container > a.prefix,
+.top-bar .prefix.login-close-text {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -2411,7 +2692,9 @@ label.inline {
 }
 
 /* line 275, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_forms.scss */
-.prefix.button.radius {
+.prefix.button.radius, .top-bar .prefix.radius.login-button,
+.top-bar .additional-link-container > a.prefix.radius,
+.top-bar .prefix.radius.login-close-text {
   -webkit-border-radius: 0;
   border-radius: 0;
   -moz-border-radius-bottomleft: 3px;
@@ -2423,7 +2706,9 @@ label.inline {
 }
 
 /* line 276, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_forms.scss */
-.postfix.button.radius {
+.postfix.button.radius, .top-bar .postfix.radius.login-button,
+.top-bar .additional-link-container > a.postfix.radius,
+.top-bar .postfix.radius.login-close-text {
   -webkit-border-radius: 0;
   border-radius: 0;
   -moz-border-radius-topright: 3px;
@@ -2435,7 +2720,9 @@ label.inline {
 }
 
 /* line 277, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_forms.scss */
-.prefix.button.round {
+.prefix.button.round, .top-bar .prefix.round.login-button,
+.top-bar .additional-link-container > a.prefix.round,
+.top-bar .prefix.round.login-close-text {
   -webkit-border-radius: 0;
   border-radius: 0;
   -moz-border-radius-bottomleft: 1000px;
@@ -2447,7 +2734,9 @@ label.inline {
 }
 
 /* line 278, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_forms.scss */
-.postfix.button.round {
+.postfix.button.round, .top-bar .postfix.round.login-button,
+.top-bar .additional-link-container > a.postfix.round,
+.top-bar .postfix.round.login-close-text {
   -webkit-border-radius: 0;
   border-radius: 0;
   -moz-border-radius-topright: 1000px;
@@ -2968,7 +3257,9 @@ form.custom .custom.disabled {
   margin-left: 0;
 }
 /* line 53, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.radius > *:first-child, .button-group.radius > *:first-child > a, .button-group.radius > *:first-child > button, .button-group.radius > *:first-child > .button {
+.button-group.radius > *:first-child, .button-group.radius > *:first-child > a, .button-group.radius > *:first-child > button, .button-group.radius > *:first-child > .button, .top-bar .button-group.radius > *:first-child > .login-button,
+.top-bar .button-group.radius > .additional-link-container:first-child > a,
+.top-bar .button-group.radius > *:first-child > .login-close-text {
   -moz-border-radius-bottomleft: 3px;
   -moz-border-radius-topleft: 3px;
   -webkit-border-bottom-left-radius: 3px;
@@ -2977,7 +3268,9 @@ form.custom .custom.disabled {
   border-top-left-radius: 3px;
 }
 /* line 57, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.radius > *:last-child, .button-group.radius > *:last-child > a, .button-group.radius > *:last-child > button, .button-group.radius > *:last-child > .button {
+.button-group.radius > *:last-child, .button-group.radius > *:last-child > a, .button-group.radius > *:last-child > button, .button-group.radius > *:last-child > .button, .top-bar .button-group.radius > *:last-child > .login-button,
+.top-bar .button-group.radius > .additional-link-container:last-child > a,
+.top-bar .button-group.radius > *:last-child > .login-close-text {
   -moz-border-radius-topright: 3px;
   -moz-border-radius-bottomright: 3px;
   -webkit-border-top-right-radius: 3px;
@@ -2986,7 +3279,9 @@ form.custom .custom.disabled {
   border-bottom-right-radius: 3px;
 }
 /* line 53, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.round > *:first-child, .button-group.round > *:first-child > a, .button-group.round > *:first-child > button, .button-group.round > *:first-child > .button {
+.button-group.round > *:first-child, .button-group.round > *:first-child > a, .button-group.round > *:first-child > button, .button-group.round > *:first-child > .button, .top-bar .button-group.round > *:first-child > .login-button,
+.top-bar .button-group.round > .additional-link-container:first-child > a,
+.top-bar .button-group.round > *:first-child > .login-close-text {
   -moz-border-radius-bottomleft: 1000px;
   -moz-border-radius-topleft: 1000px;
   -webkit-border-bottom-left-radius: 1000px;
@@ -2995,7 +3290,9 @@ form.custom .custom.disabled {
   border-top-left-radius: 1000px;
 }
 /* line 57, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.round > *:last-child, .button-group.round > *:last-child > a, .button-group.round > *:last-child > button, .button-group.round > *:last-child > .button {
+.button-group.round > *:last-child, .button-group.round > *:last-child > a, .button-group.round > *:last-child > button, .button-group.round > *:last-child > .button, .top-bar .button-group.round > *:last-child > .login-button,
+.top-bar .button-group.round > .additional-link-container:last-child > a,
+.top-bar .button-group.round > *:last-child > .login-close-text {
   -moz-border-radius-topright: 1000px;
   -moz-border-radius-bottomright: 1000px;
   -webkit-border-top-right-radius: 1000px;
@@ -3008,7 +3305,11 @@ form.custom .custom.disabled {
   width: 50%;
 }
 /* line 63, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.even-2 li button, .button-group.even-2 li .button {
+.button-group.even-2 li button, .button-group.even-2 li .button, .button-group.even-2 li .top-bar .login-button, .top-bar .button-group.even-2 li .login-button,
+.button-group.even-2 li .top-bar .additional-link-container > a,
+.top-bar .button-group.even-2 li .additional-link-container > a,
+.button-group.even-2 li .top-bar .login-close-text,
+.top-bar .button-group.even-2 li .login-close-text {
   width: 100%;
 }
 /* line 80, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
@@ -3016,7 +3317,11 @@ form.custom .custom.disabled {
   width: 33.33333%;
 }
 /* line 63, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.even-3 li button, .button-group.even-3 li .button {
+.button-group.even-3 li button, .button-group.even-3 li .button, .button-group.even-3 li .top-bar .login-button, .top-bar .button-group.even-3 li .login-button,
+.button-group.even-3 li .top-bar .additional-link-container > a,
+.top-bar .button-group.even-3 li .additional-link-container > a,
+.button-group.even-3 li .top-bar .login-close-text,
+.top-bar .button-group.even-3 li .login-close-text {
   width: 100%;
 }
 /* line 80, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
@@ -3024,7 +3329,11 @@ form.custom .custom.disabled {
   width: 25%;
 }
 /* line 63, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.even-4 li button, .button-group.even-4 li .button {
+.button-group.even-4 li button, .button-group.even-4 li .button, .button-group.even-4 li .top-bar .login-button, .top-bar .button-group.even-4 li .login-button,
+.button-group.even-4 li .top-bar .additional-link-container > a,
+.top-bar .button-group.even-4 li .additional-link-container > a,
+.button-group.even-4 li .top-bar .login-close-text,
+.top-bar .button-group.even-4 li .login-close-text {
   width: 100%;
 }
 /* line 80, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
@@ -3032,7 +3341,11 @@ form.custom .custom.disabled {
   width: 20%;
 }
 /* line 63, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.even-5 li button, .button-group.even-5 li .button {
+.button-group.even-5 li button, .button-group.even-5 li .button, .button-group.even-5 li .top-bar .login-button, .top-bar .button-group.even-5 li .login-button,
+.button-group.even-5 li .top-bar .additional-link-container > a,
+.top-bar .button-group.even-5 li .additional-link-container > a,
+.button-group.even-5 li .top-bar .login-close-text,
+.top-bar .button-group.even-5 li .login-close-text {
   width: 100%;
 }
 /* line 80, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
@@ -3040,7 +3353,11 @@ form.custom .custom.disabled {
   width: 16.66667%;
 }
 /* line 63, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.even-6 li button, .button-group.even-6 li .button {
+.button-group.even-6 li button, .button-group.even-6 li .button, .button-group.even-6 li .top-bar .login-button, .top-bar .button-group.even-6 li .login-button,
+.button-group.even-6 li .top-bar .additional-link-container > a,
+.top-bar .button-group.even-6 li .additional-link-container > a,
+.button-group.even-6 li .top-bar .login-close-text,
+.top-bar .button-group.even-6 li .login-close-text {
   width: 100%;
 }
 /* line 80, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
@@ -3048,7 +3365,11 @@ form.custom .custom.disabled {
   width: 14.28571%;
 }
 /* line 63, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.even-7 li button, .button-group.even-7 li .button {
+.button-group.even-7 li button, .button-group.even-7 li .button, .button-group.even-7 li .top-bar .login-button, .top-bar .button-group.even-7 li .login-button,
+.button-group.even-7 li .top-bar .additional-link-container > a,
+.top-bar .button-group.even-7 li .additional-link-container > a,
+.button-group.even-7 li .top-bar .login-close-text,
+.top-bar .button-group.even-7 li .login-close-text {
   width: 100%;
 }
 /* line 80, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
@@ -3056,7 +3377,11 @@ form.custom .custom.disabled {
   width: 12.5%;
 }
 /* line 63, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_button-groups.scss */
-.button-group.even-8 li button, .button-group.even-8 li .button {
+.button-group.even-8 li button, .button-group.even-8 li .button, .button-group.even-8 li .top-bar .login-button, .top-bar .button-group.even-8 li .login-button,
+.button-group.even-8 li .top-bar .additional-link-container > a,
+.top-bar .button-group.even-8 li .additional-link-container > a,
+.button-group.even-8 li .top-bar .login-close-text,
+.top-bar .button-group.even-8 li .login-close-text {
   width: 100%;
 }
 
@@ -3085,12 +3410,16 @@ form.custom .custom.disabled {
 
 /* Dropdown Button */
 /* line 108, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button {
+.dropdown.button, .top-bar .dropdown.login-button,
+.top-bar .additional-link-container > a.dropdown,
+.top-bar .dropdown.login-close-text {
   position: relative;
   padding-right: 3.1875em;
 }
 /* line 46, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button:before {
+.dropdown.button:before, .top-bar .dropdown.login-button:before,
+.top-bar .additional-link-container > a.dropdown:before,
+.top-bar .dropdown.login-close-text:before {
   position: absolute;
   content: "";
   width: 0;
@@ -3101,70 +3430,101 @@ form.custom .custom.disabled {
   top: 50%;
 }
 /* line 81, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button:before {
+.dropdown.button:before, .top-bar .dropdown.login-button:before,
+.top-bar .additional-link-container > a.dropdown:before,
+.top-bar .dropdown.login-close-text:before {
   border-width: 0.5625em;
   right: 1.5em;
   margin-top: -0.25em;
 }
 /* line 100, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button:before {
+.dropdown.button:before, .top-bar .dropdown.login-button:before,
+.top-bar .additional-link-container > a.dropdown:before,
+.top-bar .dropdown.login-close-text:before {
   border-color: white transparent transparent transparent;
 }
 /* line 109, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button.tiny {
+.dropdown.button.tiny, .top-bar .dropdown.tiny.login-button,
+.top-bar .additional-link-container > a.dropdown.tiny,
+.top-bar .dropdown.tiny.login-close-text {
   padding-right: 2.1875em;
 }
 /* line 61, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button.tiny:before {
+.dropdown.button.tiny:before, .top-bar .dropdown.tiny.login-button:before,
+.top-bar .additional-link-container > a.dropdown.tiny:before,
+.top-bar .dropdown.tiny.login-close-text:before {
   border-width: 0.4375em;
   right: 0.875em;
   margin-top: -0.15625em;
 }
 /* line 100, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button.tiny:before {
+.dropdown.button.tiny:before, .top-bar .dropdown.tiny.login-button:before,
+.top-bar .additional-link-container > a.dropdown.tiny:before,
+.top-bar .dropdown.tiny.login-close-text:before {
   border-color: white transparent transparent transparent;
 }
 /* line 110, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button.small {
+.dropdown.button.small, .top-bar .dropdown.small.login-button,
+.top-bar .additional-link-container > a.dropdown.small,
+.top-bar .dropdown.small.login-close-text {
   padding-right: 2.8125em;
 }
 /* line 71, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button.small:before {
+.dropdown.button.small:before, .top-bar .dropdown.small.login-button:before,
+.top-bar .additional-link-container > a.dropdown.small:before,
+.top-bar .dropdown.small.login-close-text:before {
   border-width: 0.5625em;
   right: 1.125em;
   margin-top: -0.21875em;
 }
 /* line 100, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button.small:before {
+.dropdown.button.small:before, .top-bar .dropdown.small.login-button:before,
+.top-bar .additional-link-container > a.dropdown.small:before,
+.top-bar .dropdown.small.login-close-text:before {
   border-color: white transparent transparent transparent;
 }
 /* line 111, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button.large {
+.dropdown.button.large, .top-bar .dropdown.large.login-button,
+.top-bar .additional-link-container > a.dropdown.large,
+.top-bar .dropdown.large.login-close-text {
   padding-right: 4em;
 }
 /* line 91, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button.large:before {
+.dropdown.button.large:before, .top-bar .dropdown.large.login-button:before,
+.top-bar .additional-link-container > a.dropdown.large:before,
+.top-bar .dropdown.large.login-close-text:before {
   border-width: 0.625em;
   right: 1.75em;
   margin-top: -0.3125em;
 }
 /* line 100, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button.large:before {
+.dropdown.button.large:before, .top-bar .dropdown.large.login-button:before,
+.top-bar .additional-link-container > a.dropdown.large:before,
+.top-bar .dropdown.large.login-close-text:before {
   border-color: white transparent transparent transparent;
 }
 /* line 112, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_dropdown-buttons.scss */
-.dropdown.button.secondary:before {
+.dropdown.button.secondary:before, .top-bar .dropdown.secondary.login-button:before, .top-bar .dropdown.login-button#forgot-password-link:before, .top-bar .dropdown.login-button#login-buttons-logout:before, .top-bar .dropdown.login-button#login-buttons-open-change-password:before,
+.top-bar .additional-link-container > a.dropdown.secondary:before,
+.top-bar .additional-link-container > a.dropdown#forgot-password-link:before,
+.top-bar .additional-link-container > a.dropdown#login-buttons-logout:before,
+.top-bar .additional-link-container > a.dropdown#login-buttons-open-change-password:before,
+.top-bar .dropdown.login-close-text:before, .dropdown.button#forgot-password-link:before, .dropdown.button#login-buttons-logout:before, .dropdown.button#login-buttons-open-change-password:before {
   border-color: #333333 transparent transparent transparent;
 }
 
 /* Split Buttons */
 /* line 150, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button {
+.split.button, .top-bar .split.login-button,
+.top-bar .additional-link-container > a.split,
+.top-bar .split.login-close-text {
   position: relative;
   padding-right: 4.8em;
 }
 /* line 53, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button span {
+.split.button span, .top-bar .split.login-button span,
+.top-bar .additional-link-container > a.split span,
+.top-bar .split.login-close-text span {
   display: block;
   height: 100%;
   position: absolute;
@@ -3173,7 +3533,9 @@ form.custom .custom.disabled {
   border-left: solid 1px;
 }
 /* line 62, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button span:before {
+.split.button span:before, .top-bar .split.login-button span:before,
+.top-bar .additional-link-container > a.split span:before,
+.top-bar .split.login-close-text span:before {
   position: absolute;
   content: "";
   width: 0;
@@ -3183,99 +3545,152 @@ form.custom .custom.disabled {
   left: 50%;
 }
 /* line 73, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button span:active {
+.split.button span:active, .top-bar .split.login-button span:active,
+.top-bar .additional-link-container > a.split span:active,
+.top-bar .split.login-close-text span:active {
   background-color: rgba(0, 0, 0, 0.1);
 }
 /* line 79, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button span {
+.split.button span, .top-bar .split.login-button span,
+.top-bar .additional-link-container > a.split span,
+.top-bar .split.login-close-text span {
   border-left-color: #1e728c;
 }
 /* line 116, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button span {
+.split.button span, .top-bar .split.login-button span,
+.top-bar .additional-link-container > a.split span,
+.top-bar .split.login-close-text span {
   width: 3em;
 }
 /* line 117, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button span:before {
+.split.button span:before, .top-bar .split.login-button span:before,
+.top-bar .additional-link-container > a.split span:before,
+.top-bar .split.login-close-text span:before {
   border-top-style: solid;
   border-width: 0.5625em;
   top: 1.125em;
   margin-left: -0.5625em;
 }
 /* line 142, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button span:before {
+.split.button span:before, .top-bar .split.login-button span:before,
+.top-bar .additional-link-container > a.split span:before,
+.top-bar .split.login-close-text span:before {
   border-color: white transparent transparent transparent;
 }
 /* line 79, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.secondary span {
+.split.button.secondary span, .top-bar .split.secondary.login-button span, .top-bar .split.login-button#forgot-password-link span, .top-bar .split.login-button#login-buttons-logout span, .top-bar .split.login-button#login-buttons-open-change-password span,
+.top-bar .additional-link-container > a.split.secondary span,
+.top-bar .additional-link-container > a.split#forgot-password-link span,
+.top-bar .additional-link-container > a.split#login-buttons-logout span,
+.top-bar .additional-link-container > a.split#login-buttons-open-change-password span,
+.top-bar .split.login-close-text span, .split.button#forgot-password-link span, .split.button#login-buttons-logout span, .split.button#login-buttons-open-change-password span {
   border-left-color: #c3c3c3;
 }
 /* line 142, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.secondary span:before {
+.split.button.secondary span:before, .top-bar .split.secondary.login-button span:before, .top-bar .split.login-button#forgot-password-link span:before, .top-bar .split.login-button#login-buttons-logout span:before, .top-bar .split.login-button#login-buttons-open-change-password span:before,
+.top-bar .additional-link-container > a.split.secondary span:before,
+.top-bar .additional-link-container > a.split#forgot-password-link span:before,
+.top-bar .additional-link-container > a.split#login-buttons-logout span:before,
+.top-bar .additional-link-container > a.split#login-buttons-open-change-password span:before,
+.top-bar .split.login-close-text span:before, .split.button#forgot-password-link span:before, .split.button#login-buttons-logout span:before, .split.button#login-buttons-open-change-password span:before {
   border-color: white transparent transparent transparent;
 }
 /* line 79, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.alert span {
+.split.button.alert span, .top-bar .split.alert.login-button span,
+.top-bar .additional-link-container > a.split.alert span,
+.top-bar .split.alert.login-close-text span {
   border-left-color: #7f0a0c;
 }
 /* line 79, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.success span {
+.split.button.success span, .top-bar .split.success.login-button span, .top-bar .split.login-button#signup-link span,
+.top-bar .additional-link-container > a.split.success span,
+.top-bar .additional-link-container > a.split#signup-link span,
+.top-bar .split.success.login-close-text span,
+.top-bar .split.login-close-text#signup-link span, .split.button#signup-link span {
   border-left-color: #396516;
 }
 /* line 156, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.tiny {
+.split.button.tiny, .top-bar .split.tiny.login-button,
+.top-bar .additional-link-container > a.split.tiny,
+.top-bar .split.tiny.login-close-text {
   padding-right: 3.9375em;
 }
 /* line 88, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.tiny span {
+.split.button.tiny span, .top-bar .split.tiny.login-button span,
+.top-bar .additional-link-container > a.split.tiny span,
+.top-bar .split.tiny.login-close-text span {
   width: 2.84375em;
 }
 /* line 89, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.tiny span:before {
+.split.button.tiny span:before, .top-bar .split.tiny.login-button span:before,
+.top-bar .additional-link-container > a.split.tiny span:before,
+.top-bar .split.tiny.login-close-text span:before {
   border-top-style: solid;
   border-width: 0.4375em;
   top: 0.875em;
   margin-left: -0.3125em;
 }
 /* line 157, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.small {
+.split.button.small, .top-bar .split.small.login-button,
+.top-bar .additional-link-container > a.split.small,
+.top-bar .split.small.login-close-text {
   padding-right: 3.9375em;
 }
 /* line 102, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.small span {
+.split.button.small span, .top-bar .split.small.login-button span,
+.top-bar .additional-link-container > a.split.small span,
+.top-bar .split.small.login-close-text span {
   width: 2.8125em;
 }
 /* line 103, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.small span:before {
+.split.button.small span:before, .top-bar .split.small.login-button span:before,
+.top-bar .additional-link-container > a.split.small span:before,
+.top-bar .split.small.login-close-text span:before {
   border-top-style: solid;
   border-width: 0.5625em;
   top: 0.84375em;
   margin-left: -0.5625em;
 }
 /* line 158, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.large {
+.split.button.large, .top-bar .split.large.login-button,
+.top-bar .additional-link-container > a.split.large,
+.top-bar .split.large.login-close-text {
   padding-right: 6em;
 }
 /* line 130, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.large span {
+.split.button.large span, .top-bar .split.large.login-button span,
+.top-bar .additional-link-container > a.split.large span,
+.top-bar .split.large.login-close-text span {
   width: 3.75em;
 }
 /* line 131, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.large span:before {
+.split.button.large span:before, .top-bar .split.large.login-button span:before,
+.top-bar .additional-link-container > a.split.large span:before,
+.top-bar .split.large.login-close-text span:before {
   border-top-style: solid;
   border-width: 0.625em;
   top: 1.3125em;
   margin-left: -0.5625em;
 }
 /* line 159, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.expand {
+.split.button.expand, .top-bar .split.expand.login-button,
+.top-bar .additional-link-container > a.split.expand,
+.top-bar .split.expand.login-close-text {
   padding-left: 2em;
 }
 /* line 142, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.secondary span:before {
+.split.button.secondary span:before, .top-bar .split.secondary.login-button span:before, .top-bar .split.login-button#forgot-password-link span:before, .top-bar .split.login-button#login-buttons-logout span:before, .top-bar .split.login-button#login-buttons-open-change-password span:before,
+.top-bar .additional-link-container > a.split.secondary span:before,
+.top-bar .additional-link-container > a.split#forgot-password-link span:before,
+.top-bar .additional-link-container > a.split#login-buttons-logout span:before,
+.top-bar .additional-link-container > a.split#login-buttons-open-change-password span:before,
+.top-bar .split.login-close-text span:before, .split.button#forgot-password-link span:before, .split.button#login-buttons-logout span:before, .split.button#login-buttons-open-change-password span:before {
   border-color: #333333 transparent transparent transparent;
 }
 /* line 163, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.radius span {
+.split.button.radius span, .top-bar .split.radius.login-button span,
+.top-bar .additional-link-container > a.split.radius span,
+.top-bar .split.radius.login-close-text span {
   -moz-border-radius-topright: 3px;
   -moz-border-radius-bottomright: 3px;
   -webkit-border-top-right-radius: 3px;
@@ -3284,7 +3699,9 @@ form.custom .custom.disabled {
   border-bottom-right-radius: 3px;
 }
 /* line 164, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_split-buttons.scss */
-.split.button.round span {
+.split.button.round span, .top-bar .split.round.login-button span,
+.top-bar .additional-link-container > a.split.round span,
+.top-bar .split.round.login-close-text span {
   -moz-border-radius-topright: 1000px;
   -moz-border-radius-bottomright: 1000px;
   -webkit-border-top-right-radius: 1000px;
@@ -3920,7 +4337,9 @@ form.custom .custom.disabled {
   height: 2.45em;
 }
 /* line 105, ../sass/components/header/_top-bar.scss */
-.top-bar .button {
+.top-bar .button, .top-bar .login-button,
+.top-bar .additional-link-container > a,
+.top-bar .login-close-text {
   padding-top: .5em;
   padding-bottom: .5em;
   margin-bottom: 0;
@@ -4057,36 +4476,88 @@ form.custom .custom.disabled {
   color: #333333;
 }
 /* line 249, ../sass/components/header/_top-bar.scss */
-.top-bar-section ul li > a.button {
+.top-bar-section ul li > a.button, .top-bar-section ul .top-bar li > a.login-button, .top-bar .top-bar-section ul li > a.login-button,
+.top-bar-section ul .top-bar li.additional-link-container > a,
+.top-bar .top-bar-section ul li.additional-link-container > a,
+.top-bar-section ul .top-bar li > a.login-close-text,
+.top-bar .top-bar-section ul li > a.login-close-text {
   background: #2ba6cb;
   font-size: 0.8125em;
 }
 /* line 252, ../sass/components/header/_top-bar.scss */
-.top-bar-section ul li > a.button:hover {
+.top-bar-section ul li > a.button:hover, .top-bar-section ul .top-bar li > a.login-button:hover, .top-bar .top-bar-section ul li > a.login-button:hover,
+.top-bar-section ul .top-bar li.additional-link-container > a:hover,
+.top-bar .top-bar-section ul li.additional-link-container > a:hover,
+.top-bar-section ul .top-bar li > a.login-close-text:hover,
+.top-bar .top-bar-section ul li > a.login-close-text:hover {
   background: #2284a1;
 }
 /* line 256, ../sass/components/header/_top-bar.scss */
-.top-bar-section ul li > a.button.secondary {
+.top-bar-section ul li > a.button.secondary, .top-bar-section ul .top-bar li > a.secondary.login-button, .top-bar .top-bar-section ul li > a.secondary.login-button, .top-bar-section ul .top-bar li > a.login-button#forgot-password-link, .top-bar .top-bar-section ul li > a.login-button#forgot-password-link, .top-bar-section ul .top-bar li > a.login-button#login-buttons-logout, .top-bar .top-bar-section ul li > a.login-button#login-buttons-logout, .top-bar-section ul .top-bar li > a.login-button#login-buttons-open-change-password, .top-bar .top-bar-section ul li > a.login-button#login-buttons-open-change-password,
+.top-bar-section ul .top-bar li.additional-link-container > a.secondary,
+.top-bar .top-bar-section ul li.additional-link-container > a.secondary,
+.top-bar-section ul .top-bar li.additional-link-container > a#forgot-password-link,
+.top-bar .top-bar-section ul li.additional-link-container > a#forgot-password-link,
+.top-bar-section ul .top-bar li.additional-link-container > a#login-buttons-logout,
+.top-bar .top-bar-section ul li.additional-link-container > a#login-buttons-logout,
+.top-bar-section ul .top-bar li.additional-link-container > a#login-buttons-open-change-password,
+.top-bar .top-bar-section ul li.additional-link-container > a#login-buttons-open-change-password,
+.top-bar-section ul .top-bar li > a.login-close-text,
+.top-bar .top-bar-section ul li > a.login-close-text, .top-bar-section ul li > a.button#forgot-password-link, .top-bar-section ul li > a.button#login-buttons-logout, .top-bar-section ul li > a.button#login-buttons-open-change-password {
   background: #e9e9e9;
 }
 /* line 258, ../sass/components/header/_top-bar.scss */
-.top-bar-section ul li > a.button.secondary:hover {
+.top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul .top-bar li > a.secondary.login-button:hover, .top-bar .top-bar-section ul li > a.secondary.login-button:hover, .top-bar-section ul .top-bar li > a.login-button#forgot-password-link:hover, .top-bar .top-bar-section ul li > a.login-button#forgot-password-link:hover, .top-bar-section ul .top-bar li > a.login-button#login-buttons-logout:hover, .top-bar .top-bar-section ul li > a.login-button#login-buttons-logout:hover, .top-bar-section ul .top-bar li > a.login-button#login-buttons-open-change-password:hover, .top-bar .top-bar-section ul li > a.login-button#login-buttons-open-change-password:hover,
+.top-bar-section ul .top-bar li.additional-link-container > a.secondary:hover,
+.top-bar .top-bar-section ul li.additional-link-container > a.secondary:hover,
+.top-bar-section ul .top-bar li.additional-link-container > a#forgot-password-link:hover,
+.top-bar .top-bar-section ul li.additional-link-container > a#forgot-password-link:hover,
+.top-bar-section ul .top-bar li.additional-link-container > a#login-buttons-logout:hover,
+.top-bar .top-bar-section ul li.additional-link-container > a#login-buttons-logout:hover,
+.top-bar-section ul .top-bar li.additional-link-container > a#login-buttons-open-change-password:hover,
+.top-bar .top-bar-section ul li.additional-link-container > a#login-buttons-open-change-password:hover,
+.top-bar-section ul .top-bar li > a.login-close-text:hover,
+.top-bar .top-bar-section ul li > a.login-close-text:hover, .top-bar-section ul li > a.button#forgot-password-link:hover, .top-bar-section ul li > a.button#login-buttons-logout:hover, .top-bar-section ul li > a.button#login-buttons-open-change-password:hover {
   background: #d0d0d0;
 }
 /* line 262, ../sass/components/header/_top-bar.scss */
-.top-bar-section ul li > a.button.success {
+.top-bar-section ul li > a.button.success, .top-bar-section ul .top-bar li > a.success.login-button, .top-bar .top-bar-section ul li > a.success.login-button, .top-bar-section ul .top-bar li > a.login-button#signup-link, .top-bar .top-bar-section ul li > a.login-button#signup-link,
+.top-bar-section ul .top-bar li.additional-link-container > a.success,
+.top-bar .top-bar-section ul li.additional-link-container > a.success,
+.top-bar-section ul .top-bar li.additional-link-container > a#signup-link,
+.top-bar .top-bar-section ul li.additional-link-container > a#signup-link,
+.top-bar-section ul .top-bar li > a.success.login-close-text,
+.top-bar .top-bar-section ul li > a.success.login-close-text,
+.top-bar-section ul .top-bar li > a.login-close-text#signup-link,
+.top-bar .top-bar-section ul li > a.login-close-text#signup-link, .top-bar-section ul li > a.button#signup-link {
   background: #5da423;
 }
 /* line 264, ../sass/components/header/_top-bar.scss */
-.top-bar-section ul li > a.button.success:hover {
+.top-bar-section ul li > a.button.success:hover, .top-bar-section ul .top-bar li > a.success.login-button:hover, .top-bar .top-bar-section ul li > a.success.login-button:hover, .top-bar-section ul .top-bar li > a.login-button#signup-link:hover, .top-bar .top-bar-section ul li > a.login-button#signup-link:hover,
+.top-bar-section ul .top-bar li.additional-link-container > a.success:hover,
+.top-bar .top-bar-section ul li.additional-link-container > a.success:hover,
+.top-bar-section ul .top-bar li.additional-link-container > a#signup-link:hover,
+.top-bar .top-bar-section ul li.additional-link-container > a#signup-link:hover,
+.top-bar-section ul .top-bar li > a.success.login-close-text:hover,
+.top-bar .top-bar-section ul li > a.success.login-close-text:hover,
+.top-bar-section ul .top-bar li > a.login-close-text#signup-link:hover,
+.top-bar .top-bar-section ul li > a.login-close-text#signup-link:hover, .top-bar-section ul li > a.button#signup-link:hover {
   background: #457a1a;
 }
 /* line 268, ../sass/components/header/_top-bar.scss */
-.top-bar-section ul li > a.button.alert {
+.top-bar-section ul li > a.button.alert, .top-bar-section ul .top-bar li > a.alert.login-button, .top-bar .top-bar-section ul li > a.alert.login-button,
+.top-bar-section ul .top-bar li.additional-link-container > a.alert,
+.top-bar .top-bar-section ul li.additional-link-container > a.alert,
+.top-bar-section ul .top-bar li > a.alert.login-close-text,
+.top-bar .top-bar-section ul li > a.alert.login-close-text {
   background: #c60f13;
 }
 /* line 270, ../sass/components/header/_top-bar.scss */
-.top-bar-section ul li > a.button.alert:hover {
+.top-bar-section ul li > a.button.alert:hover, .top-bar-section ul .top-bar li > a.alert.login-button:hover, .top-bar .top-bar-section ul li > a.alert.login-button:hover,
+.top-bar-section ul .top-bar li.additional-link-container > a.alert:hover,
+.top-bar .top-bar-section ul li.additional-link-container > a.alert:hover,
+.top-bar-section ul .top-bar li > a.alert.login-close-text:hover,
+.top-bar .top-bar-section ul li > a.alert.login-close-text:hover {
   background: #970b0e;
 }
 /* line 278, ../sass/components/header/_top-bar.scss */
@@ -4210,7 +4681,10 @@ form.custom .custom.disabled {
   }
   /* line 368, ../sass/components/header/_top-bar.scss */
   .top-bar input,
-  .top-bar .button {
+  .top-bar .button,
+  .top-bar .login-button,
+  .top-bar .additional-link-container > a,
+  .top-bar .login-close-text {
     line-height: 2em;
     font-size: 0.875em;
     height: 2em;
@@ -4674,7 +5148,11 @@ form.custom .custom.disabled {
   padding: 1.125em 1.25em 1.5em;
 }
 /* line 68, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_joyride.scss */
-.joyride-content-wrapper .button {
+.joyride-content-wrapper .button, .joyride-content-wrapper .top-bar .login-button, .top-bar .joyride-content-wrapper .login-button,
+.joyride-content-wrapper .top-bar .additional-link-container > a,
+.top-bar .joyride-content-wrapper .additional-link-container > a,
+.joyride-content-wrapper .top-bar .login-close-text,
+.top-bar .joyride-content-wrapper .login-close-text {
   margin-bottom: 0 !important;
 }
 
@@ -5100,7 +5578,7 @@ form.custom .custom.disabled {
   border-radius: 1000px;
 }
 /* line 102, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_alert-boxes.scss */
-.alert-box.success {
+.alert-box.success, .alert-box#signup-link {
   background-color: #5da423;
   border-color: #457a1a;
   color: white;
@@ -5112,7 +5590,7 @@ form.custom .custom.disabled {
   color: white;
 }
 /* line 104, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_alert-boxes.scss */
-.alert-box.secondary {
+.alert-box.secondary, .alert-box#forgot-password-link, .alert-box#login-buttons-logout, .alert-box#login-buttons-open-change-password, .top-bar .alert-box.login-close-text {
   background-color: #e9e9e9;
   border-color: #d0d0d0;
   color: #505050;
@@ -5242,12 +5720,12 @@ kbd {
   color: white;
 }
 /* line 81, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_labels.scss */
-.label.success {
+.label.success, .label#signup-link {
   background-color: #5da423;
   color: white;
 }
 /* line 82, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_labels.scss */
-.label.secondary {
+.label.secondary, .label#forgot-password-link, .label#login-buttons-logout, .label#login-buttons-open-change-password, .top-bar .label.login-close-text {
   background-color: #e9e9e9;
   color: #333333;
 }
@@ -5475,13 +5953,13 @@ kbd {
   display: block;
 }
 /* line 57, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_progress-bars.scss */
-.progress.secondary .meter {
+.progress.secondary .meter, .progress#forgot-password-link .meter, .progress#login-buttons-logout .meter, .progress#login-buttons-open-change-password .meter, .top-bar .progress.login-close-text .meter {
   background: #e9e9e9;
   height: 100%;
   display: block;
 }
 /* line 58, ../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_progress-bars.scss */
-.progress.success .meter {
+.progress.success .meter, .progress#signup-link .meter {
   background: #5da423;
   height: 100%;
   display: block;
@@ -6217,4 +6695,49 @@ header {
   border: none;
   margin-top: 0.3em;
   font-size: 0.875em;
+}
+
+/* line 1, ../sass/components/header/_login.scss */
+.top-bar-section .loginbtns {
+  margin-top: 0.4em;
+  position: relative;
+  z-index: 1000;
+}
+/* line 5, ../sass/components/header/_login.scss */
+.top-bar-section .loginbtns #login-buttons {
+  width: 16em;
+  text-align: right;
+}
+
+/* line 12, ../sass/components/header/_login.scss */
+.login-link-and-dropdown-list .accounts-dialog {
+  position: absolute;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 16em;
+}
+/* line 21, ../sass/components/header/_login.scss */
+.login-link-and-dropdown-list .message.error-message {
+  color: lightcoral;
+}
+/* line 24, ../sass/components/header/_login.scss */
+.login-link-and-dropdown-list input {
+  margin-bottom: 1em;
+}
+
+/* line 31, ../sass/components/header/_login.scss */
+.top-bar .login-button,
+.top-bar .additional-link-container > a,
+.top-bar .login-close-text {
+  margin-bottom: 0.5em;
+  float: left;
+  margin-right: 0.5em;
+}
+
+/* line 58, ../sass/components/header/_login.scss */
+.top-bar .login-close-text {
+  float: right;
 }
