@@ -10,7 +10,7 @@
 //        vat: info[5],
 //        catnr: info[6],
 //        cat: info[7]}
-Data = new Meteor.Collection("data");
+// moved data to client & server
 
 // Config  -- { user_id: user_id,
 //        categories: info[0]

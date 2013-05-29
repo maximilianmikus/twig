@@ -1,7 +1,9 @@
+Data = new Meteor.Collection("data");
+
 /////////// Saving & Updating Data Helpers /////////////
 
 
-var savedata = function (selector) {
+function savedata(selector) {
   var user_id = Meteor.userId(),
       date = string_to_date($(selector + " .dt__column__input--date").val()),
       docnr = $(selector + " .dt__column__input--docnr").val(),
@@ -26,7 +28,7 @@ var savedata = function (selector) {
   });
 };
 
-var updatedata = function (id, selector) {
+function updatedata(id, selector) {
   var date = string_to_date($(selector+" .dt__column__input--date").val()),
       docnr = $(selector+" .dt__column__input--docnr").val(),
       text = $(selector+" .dt__column__input--text").val(),
@@ -48,6 +50,24 @@ var updatedata = function (id, selector) {
                 cattext: cattext
   }});
 };
+
+var updatetotal = function () {
+  var user_id = Meteor.userId();
+  var total = 0;
+  var year = parseInt(Session.get('year'), 10);
+  if (typeof Data !== 'undefined') {
+    var data = Data.find({user_id: user_id, year: year}).fetch();
+    $.each(data, function(index, item) {
+      var amount = parseInt(item.amount, 10);
+      if(item.isearning) {
+        total = total + amount;
+      } else {
+        total = total - amount;
+      }
+    });
+    Session.set("total", total);
+  }
+}
 
 ////////// Data //////////
 
@@ -77,7 +97,6 @@ Template.data.data = function () {
     return {};
   }
   var sel = {year: parseInt(Session.get('year'), 10)};
-  //console.log(Data.find(sel, {sort: {date: 1}}));
 
   return Data.find(sel, {sort: {date: 1}});
 };
@@ -152,7 +171,7 @@ Template.dt_row_amount_input.id = function () {
 ////////// Initializing the page ///////////////
 
 Template.data.rendered = function () {
-  //$(document).foundation();
+
 };
 
 

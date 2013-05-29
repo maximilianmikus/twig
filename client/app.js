@@ -22,6 +22,7 @@ Deps.autorun(function () {
   }
 });
 
+Deps.autorun(updatetotal);
 
 //////////// Meteorite Router /////////////////
 

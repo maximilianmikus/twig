@@ -16,3 +16,9 @@ Template.yearsel.events({
     initcharts(sel_year);
   }
 });
+
+Template.total.balance = function(page) {
+  var balance = Session.get("total");
+  balance += ' €';
+  return balance;
+};
